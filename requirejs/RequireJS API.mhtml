@@ -1,0 +1,3493 @@
+From: <Saved by Blink>
+Snapshot-Content-Location: https://requirejs.org/docs/api.html
+Subject: RequireJS API
+Date: Wed, 4 Dec 2018 10:54:21 -0000
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="text/html";
+	boundary="----MultipartBoundary--P2eopmYoMS5k8SVC2kZ38m5o9jpMVl2la99L1MoEZE----"
+
+------MultipartBoundary--P2eopmYoMS5k8SVC2kZ38m5o9jpMVl2la99L1MoEZE----
+Content-Type: text/html
+Content-ID: <frame-49-9ed3a9fc-853b-4012-9a10-038e15bad727@mhtml.blink>
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://requirejs.org/docs/api.html
+
+<!DOCTYPE html><html><head><meta http-equiv=3D"Content-Type" content=3D"tex=
+t/html; charset=3DUTF-8">
+    <title>RequireJS API</title>
+
+    <meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-scale=
+=3D1">
+    <meta http-equiv=3D"X-UA-Compatible" content=3D"chrome=3D1">
+
+    <link rel=3D"stylesheet" type=3D"text/css" href=3D"https://requirejs.or=
+g/main.css">
+    <link rel=3D"icon" type=3D"image/x-icon" href=3D"https://requirejs.org/=
+favicon.png">
+    <!--[if IE]> <link rel=3D"stylesheet" type=3D"text/css" href=3D"../ie.c=
+ss" /> <![endif]-->
+    <link rel=3D"stylesheet" type=3D"text/css" href=3D"https://ajax.googlea=
+pis.com/ajax/libs/dojo/1.4/dojox/highlight/resources/highlight.css">
+
+   =20
+   =20
+   =20
+   =20
+</head>
+<body>
+<div id=3D"grid"></div>
+<div id=3D"wrapper">
+
+    <div id=3D"navBg"></div>
+    <button type=3D"button" role=3D"button" aria-label=3D"Toggle Navigation=
+" class=3D"off-canvas-button">
+      <span class=3D"lines">
+        <span class=3D"line">&nbsp;</span>
+        <span class=3D"line">&nbsp;</span>
+        <span class=3D"line">&nbsp;</span>
+      </span>
+      <span class=3D"cross">=C3=97</span>
+    </button>
+    <div id=3D"nav" class=3D"mono">
+        <a class=3D"homeImageLink" href=3D"https://requirejs.org/"></a>
+        <h1>a javascript module loader</h1>
+
+        <ul>
+            <li class=3D"hbox">
+                <a href=3D"https://requirejs.org/">Home</a>
+                <span class=3D"spacer boxFlex"></span>
+                <span class=3D"icon home"></span>
+            </li>
+        </ul>
+
+        <ul>
+            <li class=3D"hbox">
+                <a class=3D"local" href=3D"https://requirejs.org/docs/start=
+.html">Start</a>
+                <span class=3D"spacer boxFlex"></span>
+                <span class=3D"icon start"></span>
+            </li>
+            <li class=3D"hbox">
+                <a class=3D"local" href=3D"https://requirejs.org/docs/downl=
+oad.html">Download</a>
+                <span class=3D"spacer boxFlex"></span>
+                <span class=3D"icon download"></span>
+            </li>
+            <li class=3D"hbox">
+                <a class=3D"local" href=3D"https://requirejs.org/docs/api.h=
+tml">API</a>
+                <span class=3D"spacer boxFlex"></span>
+                <span class=3D"icon api"></span>
+            </li>
+            <li class=3D"hbox">
+                <a class=3D"local" href=3D"https://requirejs.org/docs/optim=
+ization.html">Optimization</a>
+                <span class=3D"spacer boxFlex"></span>
+                <span class=3D"icon optimize"></span>
+            </li>
+        </ul>
+
+        <ul>
+            <li class=3D"hbox">
+                <a class=3D"local" href=3D"https://requirejs.org/docs/jquer=
+y.html">Use with jQuery</a>
+                <span class=3D"spacer boxFlex"></span>
+                <span class=3D"icon script"></span>
+            </li>
+            <li class=3D"hbox">
+                <a class=3D"local" href=3D"https://requirejs.org/docs/node.=
+html">Use with Node</a>
+                <span class=3D"spacer boxFlex"></span>
+                <span class=3D"icon script"></span>
+            </li>
+            <li class=3D"hbox">
+                <a class=3D"local" href=3D"https://requirejs.org/docs/dojo.=
+html">Use with Dojo</a>
+                <span class=3D"spacer boxFlex"></span>
+                <span class=3D"icon script"></span>
+            </li>
+            <li class=3D"hbox">
+                <a class=3D"local" href=3D"https://requirejs.org/docs/commo=
+njs.html">CommonJS Notes</a>
+                <span class=3D"spacer boxFlex"></span>
+                <span class=3D"icon script"></span>
+            </li>
+        </ul>
+
+        <ul>
+            <li class=3D"hbox">
+                <a class=3D"local" href=3D"https://requirejs.org/docs/faq.h=
+tml">FAQs</a>
+                <span class=3D"spacer boxFlex"></span>
+                <span class=3D"icon question"></span>
+            </li>
+            <li class=3D"hbox">
+                <a class=3D"local" href=3D"https://requirejs.org/docs/error=
+s.html">Common Errors</a>
+                <span class=3D"spacer boxFlex"></span>
+                <span class=3D"icon question"></span>
+            </li>
+            <li class=3D"hbox">
+                <a class=3D"local" href=3D"https://requirejs.org/docs/plugi=
+ns.html">Writing Plugins</a>
+                <span class=3D"spacer boxFlex"></span>
+                <span class=3D"icon api"></span>
+            </li>
+        </ul>
+
+        <ul>
+            <li class=3D"hbox">
+                <a class=3D"local" href=3D"https://requirejs.org/docs/why.h=
+tml">Why Web Modules</a>
+                <span class=3D"spacer boxFlex"></span>
+                <span class=3D"icon question"></span>
+            </li>
+            <li class=3D"hbox">
+                <a class=3D"local" href=3D"https://requirejs.org/docs/whyam=
+d.html">Why AMD</a>
+                <span class=3D"spacer boxFlex"></span>
+                <span class=3D"icon question"></span>
+            </li>
+            <li class=3D"hbox">
+                <a class=3D"local" href=3D"https://requirejs.org/docs/requi=
+rements.html">Requirements</a>
+                <span class=3D"spacer boxFlex"></span>
+                <span class=3D"icon requirement"></span>
+            </li>
+            <li class=3D"hbox">
+                <a class=3D"local" href=3D"https://requirejs.org/docs/histo=
+ry.html">History</a>
+                <span class=3D"spacer boxFlex"></span>
+                <span class=3D"icon history"></span>
+            </li>
+        </ul>
+
+        <ul>
+            <li class=3D"hbox">
+                <a href=3D"https://stackoverflow.com/questions/tagged/requi=
+rejs">Get Help</a>
+                <span class=3D"spacer boxFlex"></span>
+                <span class=3D"icon help"></span>
+            </li>
+            <li class=3D"hbox">
+                <a href=3D"https://jrburke.com/">Blog</a>
+                <span class=3D"spacer boxFlex"></span>
+                <span class=3D"icon blog"></span>
+            </li>
+            <li class=3D"hbox">
+                <a href=3D"https://twitter.com/jrburke">Twitter</a>
+                <span class=3D"spacer boxFlex"></span>
+                <span class=3D"icon twitter"></span>
+            </li>
+        </ul>
+
+        <ul>
+            <li class=3D"hbox">
+                <a href=3D"https://github.com/requirejs/requirejs">GitHub</=
+a>
+                <span class=3D"spacer boxFlex"></span>
+                <span class=3D"icon git"></span>
+            </li>
+            <li class=3D"hbox">
+                <a class=3D"local" href=3D"https://requirejs.org/docs/contr=
+ibuting.html">Contributing</a>
+                <span class=3D"spacer boxFlex"></span>
+                <span class=3D"icon fork"></span>
+            </li>
+        </ul>
+
+
+        <ul>
+            <li class=3D"version">2.3.6 Docs (<a href=3D"https://github.com=
+/requirejs/requirejs/wiki/Upgrading-to-RequireJS-2.1">upgrade info</a>)</li=
+>
+        </ul>
+
+    </div>
+
+    <div id=3D"content">
+<div id=3D"directory" class=3D"section">
+<h1>RequireJS API</h1>
+
+<ul class=3D"index mono">
+    <li class=3D"hbox"><a href=3D"https://requirejs.org/docs/api.html#usage=
+">Usage</a><span class=3D"spacer boxFlex"></span><span class=3D"sect">=C2=
+=A7=C2=A7 1-1.3</span></li>
+        <ul>
+            <li class=3D"hbox"><a href=3D"https://requirejs.org/docs/api.ht=
+ml#jsfiles">Load JavaScript Files</a><span class=3D"spacer boxFlex"></span>=
+<span class=3D"sect">=C2=A7 1.1</span></li>
+            <li class=3D"hbox"><a href=3D"https://requirejs.org/docs/api.ht=
+ml#data-main">data-main Entry Point</a><span class=3D"spacer boxFlex"></spa=
+n><span class=3D"sect">=C2=A7 1.2</span></li>
+            <li class=3D"hbox"><a href=3D"https://requirejs.org/docs/api.ht=
+ml#define">Define a Module</a><span class=3D"spacer boxFlex"></span><span c=
+lass=3D"sect">=C2=A7 1.3</span></li>
+            <ul>
+                <li class=3D"hbox"><a href=3D"https://requirejs.org/docs/ap=
+i.html#defsimple">Simple Name/Value Pairs</a><span class=3D"spacer boxFlex"=
+></span><span class=3D"sect">=C2=A7 1.3.1</span></li>
+                <li class=3D"hbox"><a href=3D"https://requirejs.org/docs/ap=
+i.html#deffunc">Definition Functions</a><span class=3D"spacer boxFlex"></sp=
+an><span class=3D"sect">=C2=A7 1.3.2</span></li>
+                <li class=3D"hbox"><a href=3D"https://requirejs.org/docs/ap=
+i.html#defdep">Definition Functions with Dependencies</a><span class=3D"spa=
+cer boxFlex"></span><span class=3D"sect">=C2=A7 1.3.3</span></li>
+                <li class=3D"hbox"><a href=3D"https://requirejs.org/docs/ap=
+i.html#funcmodule">Define a Module as a Function</a><span class=3D"spacer b=
+oxFlex"></span><span class=3D"sect">=C2=A7 1.3.4</span></li>
+                <li class=3D"hbox"><a href=3D"https://requirejs.org/docs/ap=
+i.html#cjsmodule">Define a Module with Simplified CommonJS Wrapper</a><span=
+ class=3D"spacer boxFlex"></span><span class=3D"sect">=C2=A7 1.3.5</span></=
+li>
+                <li class=3D"hbox"><a href=3D"https://requirejs.org/docs/ap=
+i.html#modulename">Define a Module with a name</a><span class=3D"spacer box=
+Flex"></span><span class=3D"sect">=C2=A7 1.3.6</span></li>
+                <li class=3D"hbox"><a href=3D"https://requirejs.org/docs/ap=
+i.html#modulenotes">Other Module Notes</a><span class=3D"spacer boxFlex"></=
+span><span class=3D"sect">=C2=A7 1.3.7</span></li>
+                <li class=3D"hbox"><a href=3D"https://requirejs.org/docs/ap=
+i.html#circular">Circular Dependencies</a><span class=3D"spacer boxFlex"></=
+span><span class=3D"sect">=C2=A7 1.3.8</span></li>
+                <li class=3D"hbox"><a href=3D"https://requirejs.org/docs/ap=
+i.html#jsonp">Specify a JSONP Service Dependency</a><span class=3D"spacer b=
+oxFlex"></span><span class=3D"sect">=C2=A7 1.3.9</span></li>
+                <li class=3D"hbox"><a href=3D"https://requirejs.org/docs/ap=
+i.html#undef">Undefining a Module</a><span class=3D"spacer boxFlex"></span>=
+<span class=3D"sect">=C2=A7 1.3.10</span></li>
+
+            </ul>
+        </ul>
+    <li class=3D"hbox"><a href=3D"https://requirejs.org/docs/api.html#mecha=
+nics">Mechanics</a><span class=3D"spacer boxFlex"></span><span class=3D"sec=
+t">=C2=A7=C2=A7 2</span></li>
+    <li class=3D"hbox"><a href=3D"https://requirejs.org/docs/api.html#confi=
+g">Configuration Options</a><span class=3D"spacer boxFlex"></span><span cla=
+ss=3D"sect">=C2=A7=C2=A7 3</span></li>
+    <li class=3D"hbox"><a href=3D"https://requirejs.org/docs/api.html#advan=
+ced">Advanced Usage</a><span class=3D"spacer boxFlex"></span><span class=3D=
+"sect">=C2=A7=C2=A7 4-4.6</span></li>
+    <ul>
+        <li class=3D"hbox"><a href=3D"https://requirejs.org/docs/api.html#p=
+ackages">Loading Modules from Packages</a><span class=3D"spacer boxFlex"></=
+span><span class=3D"sect">=C2=A7 4.1</span></li>
+        <li class=3D"hbox"><a href=3D"https://requirejs.org/docs/api.html#m=
+ultiversion">Multiversion Support</a><span class=3D"spacer boxFlex"></span>=
+<span class=3D"sect">=C2=A7 4.2</span></li>
+        <li class=3D"hbox"><a href=3D"https://requirejs.org/docs/api.html#a=
+fterload">Loading Code After Page Load</a><span class=3D"spacer boxFlex"></=
+span><span class=3D"sect">=C2=A7 4.3</span></li>
+        <li class=3D"hbox"><a href=3D"https://requirejs.org/docs/api.html#w=
+ebworker">Web Worker Support</a><span class=3D"spacer boxFlex"></span><span=
+ class=3D"sect">=C2=A7 4.4</span></li>
+        <li class=3D"hbox"><a href=3D"https://requirejs.org/docs/api.html#r=
+hino">Rhino Support</a><span class=3D"spacer boxFlex"></span><span class=3D=
+"sect">=C2=A7 4.5</span></li>
+        <li class=3D"hbox"><a href=3D"https://requirejs.org/docs/api.html#n=
+ashorn">Nashorn Support</a><span class=3D"spacer boxFlex"></span><span clas=
+s=3D"sect">=C2=A7 4.6</span></li>
+        <li class=3D"hbox"><a href=3D"https://requirejs.org/docs/api.html#e=
+rrors">Handling Errors</a><span class=3D"spacer boxFlex"></span><span class=
+=3D"sect">=C2=A7 4.7</span></li>
+    </ul>
+    <li class=3D"hbox"><a href=3D"https://requirejs.org/docs/api.html#plugi=
+ns">Loader Plugins</a><span class=3D"spacer boxFlex"></span><span class=3D"=
+sect">=C2=A7=C2=A7 5-5.4</span></li>
+        <ul>
+            <li class=3D"hbox"><a href=3D"https://requirejs.org/docs/api.ht=
+ml#text">Specify a Text File Dependency</a><span class=3D"spacer boxFlex"><=
+/span><span class=3D"sect">=C2=A7 5.1</span></li>
+            <li class=3D"hbox"><a href=3D"https://requirejs.org/docs/api.ht=
+ml#pageload">Page Load Event Support/DOM Ready</a><span class=3D"spacer box=
+Flex"></span><span class=3D"sect">=C2=A7 5.2</span></li>
+            <li class=3D"hbox"><a href=3D"https://requirejs.org/docs/api.ht=
+ml#i18n">Define an I18N Bundle</a><span class=3D"spacer boxFlex"></span><sp=
+an class=3D"sect">=C2=A7 5.3</span></li>
+        </ul>
+</ul>
+</div>
+
+<div class=3D"section">
+<h2>
+<a href=3D"https://requirejs.org/docs/api.html#usage" name=3D"usage">Usage<=
+/a>
+<span class=3D"sectionMark">=C2=A7 1</span>
+</h2>
+
+<h3>
+<a href=3D"https://requirejs.org/docs/api.html#jsfiles" name=3D"jsfiles">Lo=
+ad JavaScript Files</a>
+<span class=3D"sectionMark">=C2=A7 1.1</span>
+</h3>
+
+<p>RequireJS takes a different approach to script loading than traditional =
+&lt;script&gt; tags.  While it can also run fast and optimize well, the pri=
+mary goal is to encourage modular code. As part of that, it encourages usin=
+g <strong>module IDs</strong> instead of URLs for script tags.</p>
+
+<p>RequireJS loads all code relative to a <a href=3D"https://requirejs.org/=
+docs/api.html#config-baseUrl">baseUrl</a>. The baseUrl is normally set to t=
+he same directory as the script used in a data-main attribute for the top l=
+evel script to load for a page. The <a href=3D"https://requirejs.org/docs/a=
+pi.html#data-main">data-main attribute</a> is a special attribute that requ=
+ire.js will check to start script loading. This example will end up with a =
+baseUrl of <strong>scripts</strong>:</p>
+
+<pre><code>&lt;!--This sets the baseUrl to the "scripts" directory, and
+    loads a script that will have a module ID of 'main'--&gt;
+&lt;script data-main=3D"scripts/main.js" src=3D"scripts/require.js"&gt;&lt;=
+/script&gt;
+</code></pre>
+
+<p>Or, baseUrl can be set manually via the <a href=3D"https://requirejs.org=
+/docs/api.html#config">RequireJS config</a>. If there is no explicit config=
+ and data-main is not used, then the default baseUrl is the directory that =
+contains the HTML page running RequireJS.</p>
+
+<p>RequireJS also assumes by default that all dependencies are scripts, so =
+it does not expect to see a trailing ".js" suffix on module IDs. RequireJS =
+will automatically add it when translating the module ID to a path. With th=
+e <a href=3D"https://requirejs.org/docs/api.html#config-paths">paths config=
+</a>, you can set
+up locations of a group of scripts. All of these capabilities allow you to =
+use smaller strings for scripts as compared to traditional  &lt;script&gt; =
+tags.</p>
+
+<p>There may be times when you do want to reference a script directly and n=
+ot conform to the "baseUrl + paths" rules for finding it. If a module ID ha=
+s one of the following characteristics, the ID will not be passed through t=
+he "baseUrl + paths" configuration, and just be treated like a regular URL =
+that is relative to the document:</p>
+
+<ul>
+<li>Ends in ".js".</li>
+<li>Starts with a "/".</li>
+<li>Contains an URL protocol, like "http:" or "https:".</li>
+</ul>
+
+<p>In general though, it is best to use the baseUrl and "paths" config to s=
+et paths for module IDs. By doing so, it gives you more flexibility in rena=
+ming and configuring the paths to different locations for optimization buil=
+ds.</p>
+
+<p>Similarly, to avoid a bunch of configuration, it is best to avoid deep f=
+older hierarchies for scripts, and instead either keep all the scripts in b=
+aseUrl, or if you want to separate your library/vendor-supplied code from y=
+our app code, use a directory layout like this:</p>
+
+<ul>
+    <li>www/
+    <ul>
+        <li>index.html</li>
+        <li>js/
+        <ul>
+            <li>app/
+            <ul>
+                <li>sub.js</li>
+            </ul>
+            </li>
+            <li>lib/
+            <ul>
+                <li>jquery.js</li>
+                <li>canvas.js</li>
+            </ul></li>
+            <li>app.js</li>
+            <li>require.js</li>
+        </ul></li>
+    </ul></li>
+</ul>
+
+<p>in index.html:</p>
+
+<pre><code>&lt;script data-main=3D"js/app.js" src=3D"js/require.js"&gt;&lt;=
+/script&gt;</code></pre>
+
+<p>and in app.js:</p>
+
+<pre><code>requirejs.config({
+    //By default load any module IDs from js/lib
+    baseUrl: 'js/lib',
+    //except, if the module ID starts with "app",
+    //load it from the js/app directory. paths
+    //config is relative to the baseUrl, and
+    //never includes a ".js" extension since
+    //the paths config could be for a directory.
+    paths: {
+        app: '../app'
+    }
+});
+
+// Start the main app logic.
+requirejs(['jquery', 'canvas', 'app/sub'],
+function   ($,        canvas,   sub) {
+    //jQuery, canvas and the app/sub module are all
+    //loaded and can be used here now.
+});
+</code></pre>
+
+<p>Notice as part of that example, vendor libraries like jQuery did not hav=
+e their version numbers in their file names. It is recommended to store tha=
+t version info in a separate text file if you want to track it, or if you u=
+se a tool like <a href=3D"https://github.com/volojs/volo">volo</a>, it will=
+ stamp the package.json with the version information but keep the file on d=
+isk as "jquery.js". This allows you to have the very minimal configuration =
+instead of having to put an entry in the "paths" config for each library. F=
+or instance, configure "jquery" to be "jquery-1.7.2".</p>
+
+<p>Ideally the scripts you load will be modules that are defined by calling=
+ <a href=3D"https://requirejs.org/docs/api.html#define">define()</a>. Howev=
+er, you may need to use some traditional/legacy "browser globals" scripts t=
+hat do not express their dependencies via define(). For those, you can use =
+the <a href=3D"https://requirejs.org/docs/api.html#config-shim">shim config=
+</a>. To properly express their dependencies.</p>
+
+<p>If you do not express the dependencies, you will likely get loading erro=
+rs since RequireJS loads scripts asynchronously and out of order for speed.=
+</p>
+
+<h3>
+<a href=3D"https://requirejs.org/docs/api.html#data-main" name=3D"data-main=
+">data-main Entry Point</a>
+<span class=3D"sectionMark">=C2=A7 1.2</span>
+</h3>
+
+<p>The data-main attribute is a special attribute that require.js will chec=
+k to start script loading:</p>
+
+<pre><code>&lt;!--when require.js loads it will inject another script tag
+    (with async attribute) for scripts/main.js--&gt;
+&lt;script data-main=3D"scripts/main" src=3D"scripts/require.js"&gt;&lt;/sc=
+ript&gt;
+</code></pre>
+
+<p>You will typically use a data-main script to <a href=3D"https://requirej=
+s.org/docs/api.html#config">set configuration options</a> and then load the=
+ first application module. Note: the script tag require.js generates for yo=
+ur data-main module includes the <a href=3D"https://developer.mozilla.org/e=
+n-US/docs/Web/HTML/Element/script#attr-async">async attribute</a>. This mea=
+ns that <strong>you cannot assume that the load and execution of your data-=
+main script will finish prior to other scripts referenced later in the same=
+ page.</strong></p>
+
+<p>For example, this arrangement will fail randomly when the require.config=
+ path for the 'foo' module has not been set prior to it being require()'d l=
+ater:</p>
+
+<pre><code>&lt;script data-main=3D"scripts/main" src=3D"scripts/require.js"=
+&gt;&lt;/script&gt;
+&lt;script src=3D"scripts/other.js"&gt;&lt;/script&gt;
+</code></pre>
+
+<pre><code>// contents of main.js:
+require.config({
+    paths: {
+        foo: 'libs/foo-1.1.3'
+    }
+});
+</code></pre>
+<pre><code>// contents of other.js:
+
+// This code might be called before the require.config() in main.js
+// has executed. When that happens, require.js will attempt to
+// load 'scripts/foo.js' instead of 'scripts/libs/foo-1.1.3.js'
+require(['foo'], function(foo) {
+
+});
+</code></pre>
+
+<p>If you want to do <code>require()</code> calls in the HTML page, then it=
+ is best to not use data-main. data-main is only intended for use when the =
+page just has one main entry point, the data-main script. For pages that wa=
+nt to do inline <code>require()</code> calls, it is best to nest those insi=
+de a <code>require()</code> call for the configuration:</p>
+
+<pre><code>&lt;script src=3D"scripts/require.js"&gt;&lt;/script&gt;
+&lt;script&gt;
+require(['scripts/config'], function() {
+    // Configuration loaded now, safe to do other require calls
+    // that depend on that config.
+    require(['foo'], function(foo) {
+
+    });
+});
+&lt;/script&gt;
+</code></pre>
+
+<h3>
+<a href=3D"https://requirejs.org/docs/api.html#define" name=3D"define">Defi=
+ne a Module</a>
+<span class=3D"sectionMark">=C2=A7 1.3</span>
+</h3>
+
+<p>A module is different from a traditional script file in that it defines =
+a well-scoped object that avoids polluting the global namespace. It can exp=
+licitly list its dependencies and get a handle on those dependencies withou=
+t needing to refer to global objects, but instead receive the dependencies =
+as arguments to the function that defines the module. Modules in RequireJS =
+are an extension of the <a href=3D"http://www.adequatelygood.com/2010/3/Jav=
+aScript-Module-Pattern-In-Depth">Module Pattern</a>, with the benefit of no=
+t needing globals to refer to other modules.</p>
+
+<p>The RequireJS syntax for modules allows them to be loaded as fast as pos=
+sible, even out of order, but evaluated in the correct dependency order, an=
+d since global variables are not created, it makes it possible to <a href=
+=3D"https://requirejs.org/docs/api.html#multiversion">load multiple version=
+s of a module in a page</a>.</p>
+
+<p>(If you are familiar with or are using CommonJS modules, then please als=
+o see <a href=3D"https://requirejs.org/docs/commonjs.html">CommonJS Notes</=
+a> for information on how the RequireJS module format maps to CommonJS modu=
+les).</p>
+
+<p>There should only be <strong>one</strong> module definition per file on =
+disk. The modules can be grouped into optimized bundles by the <a href=3D"h=
+ttps://requirejs.org/docs/optimization.html">optimization tool</a>.</p>
+
+<div class=3D"subSection">
+<h4>
+<a href=3D"https://requirejs.org/docs/api.html#defsimple" name=3D"defsimple=
+">Simple Name/Value Pairs</a>
+<span class=3D"sectionMark">=C2=A7 1.3.1</span>
+</h4>
+
+<p>If the module does not have any dependencies, and it is just a collectio=
+n of name/value pairs, then just pass an object literal to define():</p>
+
+<pre><code>//Inside file my/shirt.js:
+define({
+    color: "black",
+    size: "unisize"
+});
+</code></pre>
+</div>
+
+<div class=3D"subSection">
+<h4>
+<a href=3D"https://requirejs.org/docs/api.html#deffunc" name=3D"deffunc">De=
+finition Functions</a>
+<span class=3D"sectionMark">=C2=A7 1.3.2</span>
+</h4>
+
+<p>If the module does not have dependencies, but needs to use a function to=
+ do some setup work, then define itself, pass a function to define():</p>
+
+<pre><code>//my/shirt.js now does setup work
+//before returning its module definition.
+define(function () {
+    //Do setup work here
+
+    return {
+        color: "black",
+        size: "unisize"
+    }
+});
+</code></pre>
+</div>
+
+<div href=3D"#subSection" class=3D"subSection">
+<h4><a href=3D"https://requirejs.org/docs/api.html#defdep" name=3D"defdep">=
+Definition Functions with Dependencies</a><span class=3D"sectionMark">=C2=
+=A7 1.3.3</span></h4>
+
+<p>If the module has dependencies, the first argument should be an array of=
+ dependency names, and the second argument should be a definition function.=
+ The function will be called to define the module once all dependencies hav=
+e loaded. The function should return an object that defines the module. The=
+ dependencies will be passed to the definition function as function argumen=
+ts, listed in the same order as the order in the dependency array:</p>
+
+<pre><code>//my/shirt.js now has some dependencies, a cart and inventory
+//module in the same directory as shirt.js
+define(["./cart", "./inventory"], function(cart, inventory) {
+        //return an object to define the "my/shirt" module.
+        return {
+            color: "blue",
+            size: "large",
+            addToCart: function() {
+                inventory.decrement(this);
+                cart.add(this);
+            }
+        }
+    }
+);
+</code></pre>
+
+<p>In this example, a my/shirt module is created. It depends on my/cart and=
+ my/inventory. On disk, the files are structured like this:</p>
+
+<ul>
+<li>my/cart.js</li>
+<li>my/inventory.js</li>
+<li>my/shirt.js</li>
+</ul>
+
+<p>The function call above specifies two arguments, "cart" and "inventory".=
+ These are the modules represented by the "./cart" and "./inventory" module=
+ names.</p>
+
+<p>The function is not called until the my/cart and my/inventory modules ha=
+ve been loaded, and the function receives the modules as the "cart" and "in=
+ventory" arguments.</p>
+
+<p>Modules that define globals are explicitly discouraged, so that multiple=
+ versions of a module can exist in a page at a time (see <strong>Advanced U=
+sage</strong>). Also, the order of the function arguments should match the =
+order of the dependencies.</p>
+
+<p>The return object from the function call defines the "my/shirt" module. =
+By defining modules in this way, "my/shirt" does not exist as a global obje=
+ct.</p>
+</div>
+
+<div class=3D"subSection">
+<h4><a href=3D"https://requirejs.org/docs/api.html#funcmodule" name=3D"func=
+module">Define a Module as a Function</a><span class=3D"sectionMark">=C2=A7=
+ 1.3.4</span></h4>
+
+<p>Modules do not have to return objects. Any valid return value from a fun=
+ction is allowed. Here is a module that returns a function as its module de=
+finition:</p>
+
+<pre><code>//A module definition inside foo/title.js. It uses
+//my/cart and my/inventory modules from before,
+//but since foo/title.js is in a different directory than
+//the "my" modules, it uses the "my" in the module dependency
+//name to find them. The "my" part of the name can be mapped
+//to any directory, but by default, it is assumed to be a
+//sibling to the "foo" directory.
+define(["my/cart", "my/inventory"],
+    function(cart, inventory) {
+        //return a function to define "foo/title".
+        //It gets or sets the window title.
+        return function(title) {
+            return title ? (window.title =3D title) :
+                   inventory.storeName + ' ' + cart.name;
+        }
+    }
+);
+</code></pre>
+</div>
+
+<div class=3D"subSection">
+<h4><a href=3D"https://requirejs.org/docs/api.html#cjsmodule" name=3D"cjsmo=
+dule">Define a Module with Simplified CommonJS Wrapper</a><span class=3D"se=
+ctionMark">=C2=A7 1.3.5</span></h4>
+
+<p>If you wish to reuse some code that was written in the traditional <a hr=
+ef=3D"http://wiki.commonjs.org/wiki/Modules/1.1.1">CommonJS module format</=
+a> it may be difficult to re-work to the array of dependencies used above, =
+and you may prefer to have
+direct alignment of dependency name to the local variable used for that dep=
+endency. You can use the <a href=3D"https://requirejs.org/docs/commonjs.htm=
+l">simplified CommonJS wrapper</a> for those cases:</p>
+
+
+<pre><code>define(function(require, exports, module) {
+        var a =3D require('a'),
+            b =3D require('b');
+
+        //Return the module value
+        return function () {};
+    }
+);
+</code></pre>
+
+<p>This wrapper relies on Function.prototype.toString() to give a useful st=
+ring value of the function contents. This does not work on some devices lik=
+e the PS3 and some older Opera mobile browsers. Use the <a href=3D"https://=
+requirejs.org/docs/optimization.html">optimizer</a> to pull out the depende=
+ncies in the array format for use on those devices.</p>
+
+<p>More information is available on the <a href=3D"https://requirejs.org/do=
+cs/commonjs.html">CommonJS page</a>, and in the <a href=3D"https://requirej=
+s.org/docs/whyamd.html#sugar">"Sugar" section in the Why AMD page</a>.
+</p></div>
+
+<div class=3D"subSection">
+<h4><a href=3D"https://requirejs.org/docs/api.html#modulename" name=3D"modu=
+lename">Define a Module with a Name</a><span class=3D"sectionMark">=C2=A7 1=
+.3.6</span></h4>
+
+<p>You may encounter some define() calls that include a name for the module=
+ as the first argument to define():</p>
+
+<pre><code>    //Explicitly defines the "foo/title" module:
+    define("foo/title",
+        ["my/cart", "my/inventory"],
+        function(cart, inventory) {
+            //Define foo/title object in here.
+       }
+    );
+</code></pre>
+
+<p>These are normally generated by the <a href=3D"https://requirejs.org/doc=
+s/optimization.html">optimization tool</a>. You can explicitly name modules=
+ yourself, but it makes the modules less portable -- if you move the file t=
+o another directory you will need to change the name. It is normally best t=
+o avoid coding in a name for the module and just let the optimization tool =
+burn in the module names. The optimization tool needs to add the names so t=
+hat more than one module can be bundled in a file, to allow for faster load=
+ing in the browser.</p>
+</div>
+
+<div class=3D"subSection">
+
+<h4><a href=3D"https://requirejs.org/docs/api.html#modulenotes" name=3D"mod=
+ulenotes">Other Module Notes</a><span class=3D"sectionMark">=C2=A7 1.3.7</s=
+pan></h4>
+
+<p id=3D"modulenotes-onemodule"><strong>One module per file.</strong>: Only=
+ one module should be defined per JavaScript file, given the nature of the =
+module name-to-file-path lookup algorithm. You should only use the <a href=
+=3D"https://requirejs.org/docs/optimization.html">optimization tool</a> to =
+group multiple modules into optimized files.</p>
+
+<p id=3D"modulenotes-relative"><strong>Relative module names inside define(=
+)</strong>: For require("./relative/name") calls that can happen inside a d=
+efine() function call, be sure to ask for "require" as a dependency, so tha=
+t the relative name is resolved correctly:</p>
+
+<pre><code>define(["require", "./relative/name"], function(require) {
+    var mod =3D require("./relative/name");
+});
+</code></pre>
+
+<p>Or better yet, use the shortened syntax that is available for use with <=
+a href=3D"https://requirejs.org/docs/commonjs.html">translating CommonJS</a=
+> modules:</p>
+
+<pre><code>define(function(require) {
+    var mod =3D require("./relative/name");
+});
+</code></pre>
+
+<p>This form will use Function.prototype.toString() to find the require() c=
+alls, and add them to the dependency array, along with "require", so the co=
+de will work correctly with relative paths.</p>
+
+<p>Relative paths are really useful if you are creating a few modules insid=
+e a directory, so that you can share the directory with other people or oth=
+er projects, and you want to be able to get a handle on the sibling modules=
+ in that directory without
+having to know the directory's name.</p>
+
+<p id=3D"modulenotes-relative-names"><strong>Relative module names are rela=
+tive to other names, not paths</strong>: The loader stores modules by their=
+ name and not by their path internally. So for relative name references, th=
+ose are resolved relative to the module name making the reference, then tha=
+t module name, or ID, is converted to a path if needs to be loaded. Example=
+ code for a 'compute' package that has a 'main' and 'extras' modules in it:=
+</p>
+
+<pre><code>* lib/
+    * compute/
+        * main.js
+        * extras.js
+</code></pre>
+
+<p>where the main.js module looks like this:</p>
+
+<pre><code>define(["./extras"], function(extras) {
+    //Uses extras in here.
+});
+</code></pre>
+
+<p>If this was the paths config:</p>
+
+<pre><code>require.config({
+    baseUrl: 'lib',
+    paths: {
+      'compute': 'compute/main'
+    }
+});
+</code></pre>
+
+<p>And a <code>require(['compute'])</code> is done, then lib/compute/main.j=
+s will have the module name of 'compute'. When it asks for './extras', that=
+ is resolved relative to 'compute', so 'compute/./extras', which normalizes=
+ to just 'extras'. Since there is no paths config for that module name, the=
+ path generated will be for 'lib/extras.js', which is incorrect.</p>
+
+<p>For this case, <a href=3D"https://requirejs.org/docs/api.html#packages">=
+packages config</a> is a better option, since it allows setting the main mo=
+dule up as 'compute', but internally the loader will store the module with =
+the ID of 'compute/main' so that the relative reference for './extras' work=
+s.</p>
+
+<p>Another option is to construct a module at lib/compute.js that is just <=
+code>define(['./compute/main'], function(m) { return m; });</code>, then th=
+ere is no need for paths or packages config.</p>
+
+<p>Or, do not set that paths or packages config and do the top level requir=
+e call as <code>require(['compute/main'])</code>.</p>
+
+<p id=3D"modulenotes-urls"><strong>Generate URLs relative to module</strong=
+>: You may need to generate an URL that is relative to a module. To do so, =
+ask for "require" as a dependency and then use require.toUrl() to generate =
+the URL:</p>
+
+<pre><code>define(["require"], function(require) {
+    var cssUrl =3D require.toUrl("./style.css");
+});
+</code></pre>
+
+<p id=3D"modulenotes-console"><strong>Console debugging</strong>: If you ne=
+ed to work with a module you already loaded via a <code>require(["module/na=
+me"], function(){})</code> call in the JavaScript console, then you can use=
+  the require() form that just uses the string name of the module to fetch =
+it:</p>
+
+<pre><code>require("module/name").callSomeFunction()
+</code></pre>
+
+<p>Note this only works if "module/name" was previously loaded via the asyn=
+c version of require: <code>require(["module/name"])</code>. If using a rel=
+ative path, like './module/name', those only work inside define</p>
+</div>
+
+<div class=3D"subSection">
+<h4><a href=3D"https://requirejs.org/docs/api.html#circular" name=3D"circul=
+ar">Circular Dependencies</a><span class=3D"sectionMark">=C2=A7 1.3.8</span=
+></h4>
+
+<p>If you define a circular dependency ("a" needs "b" and "b" needs "a"), t=
+hen in this case when "b"'s module function is called, it will get an undef=
+ined value for "a". "b" can fetch "a" later after modules have been defined=
+ by using the require() method (be sure to specify require as a dependency =
+so the right context is used to look up "a"):</p>
+
+<pre><code>//Inside b.js:
+define(["require", "a"],
+    function(require, a) {
+        //"a" in this case will be null if "a" also asked for "b",
+        //a circular dependency.
+        return function(title) {
+            return require("a").doSomething();
+        }
+    }
+);
+</code></pre>
+
+<p>Normally you should not need to use require() to fetch a module, but ins=
+tead rely on the module being passed in to the function as an argument. Cir=
+cular dependencies are rare, and usually a sign that you might want to reth=
+ink the design. However, sometimes they are needed, and in that case, use r=
+equire() as specified above.</p>
+
+<p>If you are familiar with CommonJS modules, you could instead use <strong=
+>exports</strong> to create an empty object for the module that is availabl=
+e immediately for reference by other modules. By doing this on both sides o=
+f a circular dependency, you can then safely hold on to the the other modul=
+e. This only works if each module is exporting an object for the module val=
+ue, not a function:</p>
+
+<pre><code>//Inside b.js:
+define(function(require, exports, module) {
+    //If "a" has used exports, then we have a real
+    //object reference here. However, we cannot use
+    //any of "a"'s properties until after "b" returns a value.
+    var a =3D require("a");
+
+    exports.foo =3D function () {
+        return a.bar();
+    };
+});
+</code></pre>
+
+<p>Or, if you are using the dependency array approach, ask for the special
+<a href=3D"https://github.com/requirejs/requirejs/wiki/Differences-between-=
+the-simplified-CommonJS-wrapper-and-standard-AMD-define#wiki-magic">'export=
+s' dependency:</a></p>
+
+<pre><code>//Inside b.js:
+define(['a', 'exports'], function(a, exports) {
+    //If "a" has used exports, then we have a real
+    //object reference here. However, we cannot use
+    //any of "a"'s properties until after "b" returns a value.
+
+    exports.foo =3D function () {
+        return a.bar();
+    };
+});
+</code></pre>
+
+</div>
+
+<div class=3D"subSection">
+<h4><a href=3D"https://requirejs.org/docs/api.html#jsonp" name=3D"jsonp">Sp=
+ecify a JSONP Service Dependency</a><span class=3D"sectionMark">=C2=A7 1.3.=
+9</span></h4>
+
+<p><a href=3D"http://en.wikipedia.org/wiki/JSON#JSONP">JSONP</a> is a way o=
+f calling some services in JavaScript. It works across domains and it is an=
+ established approach to calling services that just require an HTTP GET via=
+ a script tag.</p>
+
+<p>To use a JSONP service in RequireJS, specify "define" as the callback pa=
+rameter's value. This means you can get the value of a JSONP URL as if it w=
+as a module definition.</p>
+
+<p>Here is an example that calls a JSONP API endpoint. In this example, the=
+ JSONP callback parameter is called "callback", so "callback=3Ddefine" tell=
+s the API to wrap the JSON response in a "define()" wrapper:</p>
+
+<pre><code>require(["http://example.com/api/data.json?callback=3Ddefine"],
+    function (data) {
+        //The data object will be the API response for the
+        //JSONP data call.
+        console.log(data);
+    }
+);
+</code></pre>
+
+<p>This use of JSONP should be limited to JSONP services for initial applic=
+ation setup. If the JSONP service times out, it means other modules you def=
+ine via define() may not get executed, so the error handling is not robust.=
+</p>
+
+<p><strong>Only JSONP return values that are JSON objects are supported</st=
+rong>. A JSONP response that is an array, a string or a number will not wor=
+k.</p>
+
+<p>This functionality should not be used for long-polling JSONP connections=
+ -- APIs that deal with real time streaming. Those kinds of APIs should do =
+more script cleanup after receiving each response, and RequireJS will only =
+fetch a JSONP URL once -- subsequent uses of the same URL as a dependency i=
+n a require() or define() call will get a cached value.</p>
+
+<p>Errors in loading a JSONP service are normally surfaced via timeouts for=
+ the service, since script tag loading does not give much detail into netwo=
+rk problems. To detect errors, you can override requirejs.onError() to get =
+errors. There is more information in the <a href=3D"https://requirejs.org/d=
+ocs/api.html#errors">Handling Errors</a> section.</p>
+
+</div>
+
+<div class=3D"subSection">
+<h4><a href=3D"https://requirejs.org/docs/api.html#undef" name=3D"undef">Un=
+defining a Module</a><span class=3D"sectionMark">=C2=A7 1.3.10</span></h4>
+
+<p>There is a global function, <b>requirejs.undef()</b>, that allows undefi=
+ning a module. It will reset the
+loader's internal state to forget about the previous definition of the modu=
+le.</p>
+
+<p><b>However</b>, it will not remove the module from other modules that ar=
+e already defined and got a
+handle on that module as a dependency when they executed. So it is really o=
+nly useful to use in
+error situations when no other modules have gotten a handle on a module val=
+ue, or as part of any future
+module loading that may use that module. See the <a href=3D"https://require=
+js.org/docs/api.html#errbacks">errback section</a> for an example.</p>
+
+<p>If you want to do more sophisticated dependency graph analysis for undef=
+ining work, the semi-private
+<a href=3D"https://github.com/requirejs/requirejs/wiki/Internal-API:-onReso=
+urceLoad">onResourceLoad API</a> may be helpful.</p>
+
+</div>
+
+<p></p></div><p></p>
+
+<div class=3D"section">
+<h2>
+<a href=3D"https://requirejs.org/docs/api.html#mechanics" name=3D"mechanics=
+">Mechanics</a>
+<span class=3D"sectionMark">=C2=A7 2</span>
+</h2>
+
+<p>RequireJS loads each dependency as a script tag, using head.appendChild(=
+).</p>
+
+<p>RequireJS waits for all dependencies to load, figures out the right orde=
+r in which to call the functions that define the modules, then calls the mo=
+dule definition functions once the dependencies for those functions have be=
+en called. Note that the dependencies for a given module definition functio=
+n could be called in any order, due to their sub-dependency relationships a=
+nd network load order.</p>
+
+<p>Using RequireJS in a server-side JavaScript environment that has synchro=
+nous loading should be as easy as redefining require.load(). The build syst=
+em does this, the require.load method for that environment can be found in =
+build/jslib/requirePatch.js.</p>
+
+<p>In the future, this code may be pulled into the require/ directory as an=
+ optional module that you can load in your env to get the right load behavi=
+or based on the host environment.</p>
+</div>
+
+<div class=3D"section">
+<h2>
+<a href=3D"https://requirejs.org/docs/api.html#config" name=3D"config">Conf=
+iguration Options</a>
+<span class=3D"sectionMark">=C2=A7 3</span>
+</h2>
+
+<p>When using require() in the top-level HTML page (or top-level script fil=
+e that does not define a module), a configuration object can be passed as t=
+he first option:</p>
+
+<pre><code>&lt;script src=3D"scripts/require.js"&gt;&lt;/script&gt;
+&lt;script&gt;
+  require.config({
+    baseUrl: "/another/path",
+    paths: {
+        "some": "some/v1.0"
+    },
+    waitSeconds: 15
+  });
+  require( ["some/module", "my/module", "a.js", "b.js"],
+    function(someModule,    myModule) {
+        //This function will be called when all the dependencies
+        //listed above are loaded. Note that this function could
+        //be called before the page is loaded.
+        //This callback is optional.
+    }
+  );
+&lt;/script&gt;
+</code></pre>
+
+<p>You may also call require.config from your <a href=3D"https://requirejs.=
+org/docs/api.html#data-main">data-main Entry Point</a>, but be aware that t=
+he data-main script is loaded asynchronously. Avoid other entry point scrip=
+ts which wrongly assume that data-main and its require.config will always e=
+xecute prior to their script loading.</p>
+
+<p>Also, you can define the config object as the global variable <code>requ=
+ire</code> <strong>before</strong> require.js is loaded, and have the value=
+s applied automatically.
+This example specifies some dependencies to load as soon as require.js defi=
+nes require():</p>
+
+<pre><code>&lt;script&gt;
+    var require =3D {
+        deps: ["some/module1", "my/module2", "a.js", "b.js"],
+        callback: function(module1, module2) {
+            //This function will be called when all the dependencies
+            //listed above in deps are loaded. Note that this
+            //function could be called before the page is loaded.
+            //This callback is optional.
+        }
+    };
+&lt;/script&gt;
+&lt;script src=3D"scripts/require.js"&gt;&lt;/script&gt;
+</code></pre>
+
+<p><b>Note:</b> It is best to use <code>var require =3D {}</code> and do no=
+t use
+<code>window.require =3D {}</code>, it will not behave correctly in IE.</p>
+
+<p>There are <a href=3D"https://github.com/requirejs/requirejs/wiki/Pattern=
+s-for-separating-config-from-the-main-module">some patterns for separating =
+the config from main module loading</a>.</p>
+
+<p>Supported configuration options:</p>
+
+<p id=3D"config-baseUrl"><strong><a href=3D"https://requirejs.org/docs/api.=
+html#config-baseUrl">baseUrl</a></strong>: the root path to use for all mod=
+ule lookups. So in the above example, "my/module"'s script tag will have a =
+src=3D"/another/path/my/module.js". baseUrl is <strong>not</strong> used wh=
+en loading plain .js files (indicated by a dependency string <a href=3D"htt=
+ps://requirejs.org/docs/api.html#jsfiles">starting with a slash, has a prot=
+ocol, or ends in .js</a>), those strings are used as-is, so a.js and b.js w=
+ill be loaded from the same directory as the HTML page that contains the ab=
+ove snippet.</p>
+
+<p>If no baseUrl is explicitly set in the configuration, the default value =
+will be the location of the HTML page that loads require.js. If a <strong>d=
+ata-main</strong> attribute is used, that path will become the baseUrl.</p>
+
+<p>The baseUrl can be a URL on a different domain as the page that will loa=
+d require.js. RequireJS script loading works across domains. The only restr=
+iction is on text content loaded by text! plugins: those paths should be on=
+ the same domain as the page, at least during development. The optimization=
+ tool will inline text! plugin resources so after using the optimization to=
+ol, you can use resources that reference text! plugin resources from anothe=
+r domain.</p>
+
+<p id=3D"config-paths"><strong><a href=3D"https://requirejs.org/docs/api.ht=
+ml#config-paths">paths</a></strong>: path mappings for module names not fou=
+nd directly under baseUrl. The path settings are assumed to be relative to =
+baseUrl, unless the paths setting starts with a "/" or has a URL protocol i=
+n it ("like http:"). Using the above sample config, "some/module"'s script =
+tag will be src=3D"/another/path/some/v1.0/module.js".</p>
+
+<p>The path that is used for a module name should <strong>not</strong> incl=
+ude an extension, since the path mapping could be for a directory. The path=
+ mapping code will automatically add the .js extension when mapping the mod=
+ule name to a path. If <a href=3D"https://requirejs.org/docs/api.html#modul=
+enotes-urls">require.toUrl()</a> is used, it will add the appropriate exten=
+sion, if it is for something like a text template.</p>
+
+<p>When run in a browser, <a href=3D"https://requirejs.org/docs/api.html#pa=
+thsfallbacks">paths fallbacks</a> can be specified, to allow trying a load =
+from a CDN location, but falling back to a local location if the CDN locati=
+on fails to load.</p>
+
+<p id=3D"config-bundles"><strong><a href=3D"https://requirejs.org/docs/api.=
+html#config-bundles">bundles</a></strong>: Introduced in RequireJS 2.1.10: =
+allows configuring multiple module IDs to be found in another script. Examp=
+le:</p>
+
+<pre><code>requirejs.config({
+    bundles: {
+        'primary': ['main', 'util', 'text', 'text!template.html'],
+        'secondary': ['text!secondary.html']
+    }
+});
+
+require(['util', 'text'], function(util, text) {
+    //The script for module ID 'primary' was loaded,
+    //and that script included the define()'d
+    //modules for 'util' and 'text'
+});
+</code></pre>
+
+<p>That config states: modules 'main', 'util', 'text' and 'text!template.ht=
+ml' will be found by loading module ID 'primary'. Module 'text!secondary.ht=
+ml' can be found by loading module ID 'secondary'.
+</p>
+
+<p>This only sets up where to find a module inside a script that has multip=
+le define()'d modules in it. It does not automatically bind those modules t=
+o the bundle's module ID. The bundle's module ID is just used for locating =
+the set of modules.</p>
+
+<p>Something similar is possible with paths config, but it is much wordier,=
+ and the paths config route does not allow loader plugin resource IDs in it=
+s configuration, since the paths config values are path segments, not IDs.<=
+/p>
+
+<p>bundles config is useful if doing a build and that build target was not =
+an existing module ID, or if you have loader plugin resources in built JS f=
+iles that should not be loaded by the loader plugin. <strong>Note that the =
+keys and values are module IDs</strong>, not path segments. They are absolu=
+te module IDs, not a module ID prefix like <a href=3D"https://requirejs.org=
+/docs/api.html#config-paths">paths config</a> or <a href=3D"https://require=
+js.org/docs/api.html#config-map">map config</a>. Also, bundle config is dif=
+ferent from map config in that map config is a one-to-one module ID relatio=
+nship, where bundle config is for pointing multiple module IDs to a bundle'=
+s module ID.</p>
+
+<p>As of RequireJS 2.2.0, the optimizer can generate the bundles config and=
+ insert it into the top level requirejs.config() call. See the <a href=3D"h=
+ttps://github.com/requirejs/r.js/blob/98a9949480d68a781c8d6fc4ce0a07c16a2c8=
+a2a/build/example.build.js#L641">bundlesConfigOutFile</a> build config opti=
+on for more details.</p>
+
+<p id=3D"config-shim"><strong><a href=3D"https://requirejs.org/docs/api.htm=
+l#config-shim">shim</a></strong>: Configure the dependencies, exports, and =
+custom initialization for older, traditional "browser globals" scripts that=
+ do not use define() to declare the dependencies and set a module value.</p=
+>
+
+<p>Here is an example. It requires RequireJS 2.1.0+, and assumes backbone.j=
+s, underscore.js and jquery.js have been installed in the baseUrl directory=
+. If not, then you may need to set a paths config for them:</p>
+
+<pre><code>requirejs.config({
+    //Remember: only use shim config for non-AMD scripts,
+    //scripts that do not already call define(). The shim
+    //config will not work correctly if used on AMD scripts,
+    //in particular, the exports and init config will not
+    //be triggered, and the deps config will be confusing
+    //for those cases.
+    shim: {
+        'backbone': {
+            //These script dependencies should be loaded before loading
+            //backbone.js
+            deps: ['underscore', 'jquery'],
+            //Once loaded, use the global 'Backbone' as the
+            //module value.
+            exports: 'Backbone'
+        },
+        'underscore': {
+            exports: '_'
+        },
+        'foo': {
+            deps: ['bar'],
+            exports: 'Foo',
+            init: function (bar) {
+                //Using a function allows you to call noConflict for
+                //libraries that support it, and do other cleanup.
+                //However, plugins for those libraries may still want
+                //a global. "this" for the function will be the global
+                //object. The dependencies will be passed in as
+                //function arguments. If this function returns a value,
+                //then that value is used as the module export value
+                //instead of the object found via the 'exports' string.
+                //Note: jQuery registers as an AMD module via define(),
+                //so this will not work for jQuery. See notes section
+                //below for an approach for jQuery.
+                return this.Foo.noConflict();
+            }
+        }
+    }
+});
+
+//Then, later in a separate file, call it 'MyModel.js', a module is
+//defined, specifying 'backbone' as a dependency. RequireJS will use
+//the shim config to properly load 'backbone' and give a local
+//reference to this module. The global Backbone will still exist on
+//the page too.
+define(['backbone'], function (Backbone) {
+  return Backbone.Model.extend({});
+});
+</code></pre>
+
+<p>In RequireJS 2.0.*, the "exports" property in the shim config could have
+    been a function instead of a string. In that case, it functioned
+the same as the "init" property as shown above. The "init" pattern is used =
+in
+RequireJS 2.1.0+ so a string value for <code>exports</code> can be used for
+<a href=3D"https://requirejs.org/docs/api.html#config-enforceDefine">enforc=
+eDefine</a>, but then allow
+functional work once the library is known to have loaded.</p>
+
+<p>For "modules" that are just jQuery or Backbone plugins that do not need =
+to export
+any module value, the shim config can just be an array of dependencies:</p>
+
+<pre><code>requirejs.config({
+    shim: {
+        'jquery.colorize': ['jquery'],
+        'jquery.scroll': ['jquery'],
+        'backbone.layoutmanager': ['backbone']
+    }
+});
+</code></pre>
+
+<p>Note however if you want to get 404 load detection in IE so that you can=
+  use paths fallbacks or errbacks, then a string exports value should be gi=
+ven so the loader can check if the scripts actually
+loaded (a return from init is <strong>not</strong> used for <code>enforceDe=
+fine</code> checking):</p>
+
+<pre><code>requirejs.config({
+    shim: {
+        'jquery.colorize': {
+            deps: ['jquery'],
+            exports: 'jQuery.fn.colorize'
+        },
+        'jquery.scroll': {
+            deps: ['jquery'],
+            exports: 'jQuery.fn.scroll'
+        },
+        'backbone.layoutmanager': {
+            deps: ['backbone']
+            exports: 'Backbone.LayoutManager'
+        }
+    }
+});
+</code></pre>
+
+<p><b>Important notes for "shim" config:</b></p>
+
+<ul>
+    <li>The shim config only sets up code relationships. To load modules th=
+at
+    are part of or use shim config, a normal require/define call is needed.=
+ Setting shim by
+    itself does not trigger code to load.</li>
+    <li>Only use other "shim" modules as dependencies for shimmed scripts, =
+or
+    AMD libraries that have no dependencies and call define() after they al=
+so
+    create a global (like jQuery or lodash). Otherwise, if you use an AMD
+    module as a dependency for a shim config module, after a build, that
+    AMD module may not be evaluated until after the shimmed code in the bui=
+ld
+    executes, and an error will occur. The ultimate fix is to upgrade all t=
+he
+    shimmed code to have optional AMD define() calls.</li>
+    <li>If it is not possible to upgrade the shimmed code to use AMD define=
+()
+    calls, as of RequireJS 2.1.11, the optimizer has a
+    <a href=3D"https://github.com/requirejs/r.js/blob/b8a6982d2923ae8389355=
+edaa50d2b7f8065a01a/build/example.build.js#L68">wrapShim build option</a> t=
+hat will
+    try to automatically wrap the shimmed code in a define() for a build. T=
+his
+    changes the scope of shimmed dependencies, so it is not guaranteed to a=
+lways
+    work, but, for example, for shimmed dependencies that depend on an AMD =
+version of Backbone,
+    it can be helpful.</li>
+    <li>The init function will <strong>not</strong> be called for AMD modul=
+es.
+    For example, you cannot use a shim init function to call jQuery's noCon=
+flict.
+    See <a href=3D"https://requirejs.org/docs/jquery.html#noconflictmap">Ma=
+pping Modules to use noConflict</a>
+    for an alternate approach to jQuery.</li>
+    <li>Shim config is not supported when running AMD modules in node via R=
+equireJS (it works for optimizer use though). Depending on the module being=
+ shimmed, it may fail in Node because Node does not have the same global en=
+vironment as browsers. As of RequireJS 2.1.7, it will warn you in the conso=
+le that shim config is not supported, and it may or may not work. If you wi=
+sh to suppress that message, you can pass <code>requirejs.config({ suppress=
+: { nodeShim: true }});</code>.</li>
+</ul>
+
+<p><b>Important optimizer notes for "shim" config</b>:</p>
+
+<ul>
+    <li>You should use the <a href=3D"https://requirejs.org/docs/optimizati=
+on.html#mainConfigFile">mainConfigFile build option</a> to specify the file=
+ where to find the shim config. Otherwise the optimizer will not know of th=
+e shim config. The other option is to duplicate the shim config in the buil=
+d profile.</li>
+    <li>Do not mix CDN loading with shim config in a build. Example scenari=
+o: you load jQuery from the CDN but use the shim config to load something l=
+ike the stock version of Backbone that depends on jQuery. When you do the b=
+uild, be sure to inline jQuery in the built file and do not load it from th=
+e CDN. Otherwise, Backbone will be inlined in the built file and it will ex=
+ecute before the CDN-loaded jQuery will load. This is because the shim conf=
+ig just delays loading of the files until dependencies are loaded, but does=
+ not do any auto-wrapping of define. After a build, the dependencies are al=
+ready inlined, the shim config cannot delay execution of the non-define()'d=
+ code until later. define()'d modules do work with CDN loaded code after a =
+build because they properly wrap their source in define factory function th=
+at will not execute until dependencies are loaded. So the lesson: shim conf=
+ig is a stop-gap measure for non-modular code, legacy code. define()'d modu=
+les are better.</li>
+    <li>For local, multi-file builds, the above CDN advice also applies. Fo=
+r any shimmed script, its dependencies <strong>must</strong> be loaded befo=
+re the shimmed script executes. This means either building its dependencies=
+ directly in the buid layer that includes the shimmed script, or loading it=
+s dependencies with a <code>require([], function (){})</code> call, then do=
+ing a nested <code>require([])</code> call for the build layer that has the=
+ shimmed script.</li>
+    <li>If you are using uglifyjs to minify the code, <strong>do not</stron=
+g> set the uglify
+        option <code>toplevel</code> to true, or if using the command line
+        <strong>do not</strong> pass <code>-mt</code>. That option mangles
+        the global names that shim uses to find exports.</li>
+</ul>
+
+<p id=3D"config-map"><strong><a href=3D"https://requirejs.org/docs/api.html=
+#config-map">map</a></strong>: For the given module prefix, instead of load=
+ing the module with the given ID, substitute a different module ID.</p>
+
+<p>This sort of capability is really important for larger projects which ma=
+y have
+two sets of modules that need to use two different versions of 'foo', but t=
+hey
+still need to cooperate with each other.</p>
+
+<p>This is not possible with the <a href=3D"https://requirejs.org/docs/api.=
+html#multiversion">context-backed multiversion support</a>. In addition, th=
+e <a href=3D"https://requirejs.org/docs/api.html#config-paths">paths config=
+</a> is only for setting up root paths for module IDs, not for mapping one =
+module ID to another one.</p>
+
+<p>map example:</p>
+
+<pre><code>requirejs.config({
+    map: {
+        'some/newmodule': {
+            'foo': 'foo1.2'
+        },
+        'some/oldmodule': {
+            'foo': 'foo1.0'
+        }
+    }
+});
+</code></pre>
+
+<p>If the modules are laid out on disk like this:</p>
+
+<ul>
+    <li>foo1.0.js</li>
+    <li>foo1.2.js</li>
+    <li>some/
+        <ul>
+            <li>newmodule.js</li>
+            <li>oldmodule.js</li>
+        </ul>
+    </li>
+</ul>
+
+<p>When 'some/newmodule' does `require('foo')` it will get the foo1.2.js fi=
+le,
+and when 'some/oldmodule' does `require('foo')` it will get the foo1.0.js f=
+ile.</p>
+
+<p>This feature only works well for scripts that are real AMD modules that =
+call
+define() and register as anonymous modules. Also, <strong>only use absolute=
+ module IDs</strong> for map config. Relative IDs (like <code>'../some/thin=
+g'</code>) do not work.</p>
+
+<p>There is also support for a "*" map value which means "for all modules l=
+oaded, use this map config". If there is a more specific map config, that o=
+ne will take precedence over the star config. Example:</p>
+
+<pre><code>
+requirejs.config({
+    map: {
+        '*': {
+            'foo': 'foo1.2'
+        },
+        'some/oldmodule': {
+            'foo': 'foo1.0'
+        }
+    }
+});
+</code></pre>
+
+<p>Means that for any module except "some/oldmodule", when "foo" is wanted,=
+ use "foo1.2" instead. For "some/oldmodule" only, use "foo1.0" when it asks=
+ for "foo".</p>
+
+<p id=3D"config-map-notes"><strong>Note:</strong> when doing builds with ma=
+p config, the map config needs to be fed to the optimizer, and the build ou=
+tput must still contain a requirejs config call that sets up the map config=
+. The optimizer does not do ID renaming during the build, because some depe=
+ndency references in a project could depend on runtime variable state. So t=
+he optimizer does not invalidate the need for a map config after the build.=
+</p>
+
+<p id=3D"config-moduleconfig"><strong><a href=3D"https://requirejs.org/docs=
+/api.html#config-moduleconfig">config</a></strong>: There is a common need =
+to pass configuration info to a module.  That configuration info is usually=
+ known as part of the application, and there needs to be a way to pass that=
+ down to a module. In RequireJS, that is done with the <b>config</b> option=
+ for requirejs.config(). Modules can then read that info by asking for the =
+special dependency "module" and calling <b>module.config()</b>. Example:</p=
+>
+
+<pre><code>requirejs.config({
+    config: {
+        'bar': {
+            size: 'large'
+        },
+        'baz': {
+            color: 'blue'
+        }
+    }
+});
+
+//bar.js, which uses simplified CJS wrapping:
+//https://requirejs.org/docs/whyamd.html#sugar
+define(function (require, exports, module) {
+    //Will be the value 'large'
+    var size =3D module.config().size;
+});
+
+//baz.js which uses a dependency array,
+//it asks for the special module ID, 'module':
+//https://github.com/requirejs/requirejs/wiki/Differences-between-the-simpl=
+ified-CommonJS-wrapper-and-standard-AMD-define#wiki-magic
+define(['module'], function (module) {
+    //Will be the value 'blue'
+    var color =3D module.config().color;
+});
+</code></pre>
+
+<p>For passing config to a <a href=3D"https://requirejs.org/docs/api.html#p=
+ackages">package</a>, target the main module in the package,
+    not the package ID:</p>
+
+<pre><code>requirejs.config({
+    //Pass an API key for use in the pixie package's
+    //main module.
+    config: {
+        'pixie/index': {
+            apiKey: 'XJKDLNS'
+        }
+    },
+    //Set up config for the "pixie" package, whose main
+    //module is the index.js file in the pixie folder.
+    packages: [
+        {
+            name: 'pixie',
+            main: 'index'
+        }
+    ]
+});
+</code></pre>
+
+<p id=3D"config-packages"><strong><a href=3D"https://requirejs.org/docs/api=
+.html#config-packages">packages</a></strong>: configures loading modules fr=
+om CommonJS packages. See the <a href=3D"https://requirejs.org/docs/api.htm=
+l#packages">packages topic</a> for more information.</p>
+
+<p id=3D"config-nodeIdCompat"><strong><a href=3D"https://requirejs.org/docs=
+/api.html#config-nodeIdCompat">nodeIdCompat</a></strong>: Node treats modul=
+e ID <code>example.js</code> and <code>example</code> the same. By default =
+these are two different IDs in RequireJS. If you end up using modules insta=
+lled from npm, then you may need to set this config value to <code>true</co=
+de> to avoid resolution issues. This option only applies to treating the ".=
+js" suffix differently, it does not do any other node resolution and evalua=
+tion matching such as .json file handling (JSON handling needs a 'json!' lo=
+ader plugin anyway). Available in 2.1.10 and greater.</p>
+
+<p id=3D"config-waitSeconds"><strong><a href=3D"https://requirejs.org/docs/=
+api.html#config-waitSeconds">waitSeconds</a></strong>: The number of second=
+s to wait before giving up on loading a script. Setting it to 0 disables th=
+e timeout. The default is 7 seconds.</p>
+
+<p id=3D"config-context"><strong><a href=3D"https://requirejs.org/docs/api.=
+html#config-context">context</a></strong>: A name to give to a loading cont=
+ext. This allows require.js to load multiple versions of modules in a page,=
+ as long as each top-level require call specifies a unique context string. =
+To use it correctly, see the <a href=3D"https://requirejs.org/docs/api.html=
+#multiversion">Multiversion Support</a> section.</p>
+
+<p id=3D"config-deps"><strong><a href=3D"https://requirejs.org/docs/api.htm=
+l#config-deps">deps</a></strong>: An array of dependencies to load. Useful =
+when require is defined as a config object before require.js is loaded, and=
+ you want to specify dependencies to load as soon as require() is defined. =
+Using deps is just like doing a <code>require([])</code> call, but done as =
+soon as the loader has processed the configuration. <strong>It does not blo=
+ck</strong>
+any other require() calls from starting their requests for modules, it is j=
+ust a way to specify
+some modules to load asynchronously as part of a config block.</p>
+
+<p id=3D"config-callback"><strong><a href=3D"https://requirejs.org/docs/api=
+.html#config-callback">callback</a></strong>: A function to execute after <=
+strong>deps</strong> have been loaded. Useful when require is defined as a =
+config object before require.js is loaded, and you want to specify a functi=
+on to require after the configuration's <strong>deps</strong> array has bee=
+n loaded.</p>
+
+<p id=3D"config-enforceDefine"><strong><a href=3D"https://requirejs.org/doc=
+s/api.html#config-enforceDefine">enforceDefine</a></strong>: If set to true=
+, an error will be thrown if a script loads that does not call define() or =
+have a shim exports string value that can be checked. See <a href=3D"https:=
+//requirejs.org/docs/api.html#ieloadfail">Catching load failures in IE</a> =
+for more information.</p>
+
+<p id=3D"config-xhtml"><strong><a href=3D"https://requirejs.org/docs/api.ht=
+ml#config-xhtml">xhtml</a></strong>: If set to true, document.createElement=
+NS() will be used to create script elements.</p>
+
+<p id=3D"config-urlArgs"><strong><a href=3D"https://requirejs.org/docs/api.=
+html#config-urlArgs">urlArgs</a></strong>: Extra query string arguments app=
+ended to URLs that RequireJS uses to fetch resources. Most useful to cache =
+bust when the browser or server is not configured correctly. Example cache =
+bust setting for urlArgs:</p>
+
+<pre><code>urlArgs: "bust=3D" +  (new Date()).getTime()
+</code></pre>
+
+<p>As of RequireJS 2.2.0, urlArgs can be a function. If a function, it will=
+ receive the module ID and the URL as parameters, and it should return a st=
+ring that will be added to the end of the URL. Return an empty string if no=
+ args. Be sure to take care of adding the '?' or '&amp;' depending on the e=
+xisting state of the URL. Example:</p>
+
+<pre><code>requirejs.config({
+    urlArgs: function(id, url) {
+        var args =3D 'v=3D1';
+        if (url.indexOf('view.html') !=3D=3D -1) {
+            args =3D 'v=3D2'
+        }
+
+        return (url.indexOf('?') =3D=3D=3D -1 ? '?' : '&amp;') + args;
+    }
+});
+</code></pre>
+
+<p>During development it can be useful to use this, however <strong>be sure=
+</strong> to remove it before deploying your code.</p>
+
+<p id=3D"config-scriptType"><strong><a href=3D"https://requirejs.org/docs/a=
+pi.html#config-scriptType">scriptType</a></strong>: Specify the value for t=
+he type=3D"" attribute used for script tags inserted into the document by R=
+equireJS. Default is "text/javascript". To use Firefox's JavaScript 1.8 fea=
+tures, use "text/javascript;version=3D1.8".</p>
+
+<p id=3D"config-skipDataMain"><strong><a href=3D"https://requirejs.org/docs=
+/api.html#config-skipDataMain">skipDataMain</a></strong>: Introduced in Req=
+uireJS 2.1.9: If set to <code>true</code>, skips the <a href=3D"https://req=
+uirejs.org/docs/api.html#data-main">data-main attribute scanning</a> done t=
+o start module loading. Useful if RequireJS is embedded in a utility librar=
+y that may interact with other RequireJS library on the page, and the embed=
+ded version should not do data-main loading.</p>
+
+</div>
+
+<div class=3D"section">
+<h2>
+<a href=3D"https://requirejs.org/docs/api.html#advanced" name=3D"advanced">=
+Advanced Usage</a>
+<span class=3D"sectionMark">=C2=A7 4</span>
+</h2>
+
+<h3><a href=3D"https://requirejs.org/docs/api.html#packages" name=3D"packag=
+es">Loading Modules from Packages</a><span class=3D"sectionMark">=C2=A7 4.1=
+</span></h3>
+
+<p>RequireJS supports loading modules that are in a <a href=3D"http://wiki.=
+commonjs.org/wiki/Packages/1.1">CommonJS Packages</a> directory structure, =
+but some additional configuration needs to be specified for it to work. Spe=
+cifically, there is support for the following CommonJS Packages features:</=
+p>
+
+<ul>
+<li>A package can be associated with a module name/prefix.</li>
+<li>The package config can specify the following properties for a specific =
+package:
+<ul>
+<li><strong>name</strong>: The name of the package (used for the module nam=
+e/prefix mapping)</li>
+<li><strong>location</strong>: The location on disk. Locations are relative=
+ to the baseUrl configuration value, unless they contain a protocol or star=
+t with a front slash (/).</li>
+<li><strong>main</strong>: The name of the module inside the package that s=
+hould be used when someone does a require for "packageName". The default va=
+lue is "main", so only specify it if it differs from the default. The value=
+ is relative to the package folder.</li>
+</ul></li>
+</ul>
+
+<p><strong>IMPORTANT NOTES</strong></p>
+
+<ul>
+<li>While the packages can have the CommonJS directory layout, the modules =
+themselves should be in a module format that RequireJS can understand. Exce=
+ption to the rule: if you are using the r.js Node adapter, the modules can =
+be in the traditional CommonJS module format. You can use the <a href=3D"ht=
+tps://requirejs.org/docs/commonjs.html#autoconversion">CommonJS converter t=
+ool</a> if you need to convert traditional CommonJS modules into the async =
+module format that RequireJS uses.</li>
+<li>Only one version of a package can be used in a project context at a tim=
+e. You can use RequireJS <a href=3D"https://requirejs.org/docs/api.html#mul=
+tiversion">multiversion support</a> to load two different module contexts, =
+but if you want to use Package A and B in one context and they depend on di=
+fferent versions of Package C, then that will be a problem. This may change=
+ in the future.</li>
+</ul>
+
+<p>If you use a similar project layout as specified in the <a href=3D"https=
+://requirejs.org/docs/start.html">Start Guide</a>, the start of your web pr=
+oject would look something like this (Node/Rhino-based projects are similar=
+, just use the contents of the <strong>scripts</strong> directory as the to=
+p-level project directory):</p>
+
+<ul>
+<li>project-directory/
+<ul>
+<li>project.html</li>
+<li>scripts/
+<ul>
+<li>require.js</li>
+</ul></li>
+</ul></li>
+</ul>
+
+<p>Here is how the example directory layout looks with two packages, <stron=
+g>cart</strong> and <strong>store</strong>:</p>
+
+<ul>
+<li>project-directory/
+<ul>
+<li>project.html</li>
+<li>scripts/
+<ul>
+<li>cart/
+<ul>
+<li>main.js</li>
+</ul></li>
+<li>store/
+<ul>
+<li>main.js</li>
+<li>util.js</li>
+</ul></li>
+<li>main.js</li>
+<li>require.js</li>
+</ul></li>
+</ul></li>
+</ul>
+
+<p><strong>project.html</strong> will have a script tag like this:</p>
+
+<pre><code>&lt;script data-main=3D"scripts/main" src=3D"scripts/require.js"=
+&gt;&lt;/script&gt;
+</code></pre>
+
+<p>This will instruct require.js to load scripts/main.js. <strong>main.js</=
+strong> uses the "packages" config to set up packages that are relative to =
+require.js, which in this case are the source packages "cart" and "store":<=
+/p>
+
+<pre><code>//main.js contents
+//Pass a config object to require
+require.config({
+    "packages": ["cart", "store"]
+});
+
+require(["cart", "store", "store/util"],
+function (cart,   store,   util) {
+    //use the modules as usual.
+});
+</code></pre>
+
+<p>A require of "cart" means that it will be loaded from <strong>scripts/ca=
+rt/main.js</strong>, since "main" is the default main module setting suppor=
+ted by RequireJS. A require of "store/util" will be loaded from <strong>scr=
+ipts/store/util.js</strong>.</p>
+
+<p>If the "store" package did not follow the "main.js" convention, and look=
+ed more like this:</p>
+
+<ul>
+<li>project-directory/
+<ul>
+<li>project.html</li>
+<li>scripts/
+<ul>
+<li>cart/
+<ul>
+<li>main.js</li>
+</ul></li>
+<li>store/
+<ul>
+<li>store.js</li>
+<li>util.js</li>
+</ul></li>
+<li>main.js</li>
+<li>package.json</li>
+<li>require.js</li>
+</ul></li>
+</ul></li>
+</ul>
+
+<p>Then the RequireJS configuration would look like so:</p>
+
+<pre><code>require.config({
+    packages: [
+        "cart",
+        {
+            name: "store",
+            main: "store"
+        }
+    ]
+});
+</code></pre>
+
+<p>To avoid verbosity, it is strongly suggested to always use packages that=
+ use "main" convention in their structure.</p>
+
+<h3><a href=3D"https://requirejs.org/docs/api.html#multiversion" name=3D"mu=
+ltiversion">Multiversion Support</a><span class=3D"sectionMark">=C2=A7 4.2<=
+/span></h3>
+
+<p>As mentioned in <a href=3D"https://requirejs.org/docs/api.html#config">C=
+onfiguration Options</a>, multiple versions of a module can be loaded in a =
+page by using different "context" configuration options. require.config() r=
+eturns a require function that will use the context configuration. Here is =
+an example that loads two different versions of the alpha and beta modules =
+(this example is taken from one of the test files):</p>
+
+<pre><code>&lt;script src=3D"../require.js"&gt;&lt;/script&gt;
+&lt;script&gt;
+var reqOne =3D require.config({
+  context: "version1",
+  baseUrl: "version1"
+});
+
+reqOne(["require", "alpha", "beta",],
+function(require,   alpha,   beta) {
+  log("alpha version is: " + alpha.version); //prints 1
+  log("beta version is: " + beta.version); //prints 1
+
+  setTimeout(function() {
+    require(["omega"],
+      function(omega) {
+        log("version1 omega loaded with version: " +
+             omega.version); //prints 1
+      }
+    );
+  }, 100);
+});
+
+var reqTwo =3D require.config({
+      context: "version2",
+      baseUrl: "version2"
+    });
+
+reqTwo(["require", "alpha", "beta"],
+function(require,   alpha,   beta) {
+  log("alpha version is: " + alpha.version); //prints 2
+  log("beta version is: " + beta.version); //prints 2
+
+  setTimeout(function() {
+    require(["omega"],
+      function(omega) {
+        log("version2 omega loaded with version: " +
+            omega.version); //prints 2
+      }
+    );
+  }, 100);
+});
+&lt;/script&gt;
+</code></pre>
+
+<p>Note that "require" is specified as a dependency for the module. This al=
+lows the require() function that is passed to the function callback to use =
+the right context to load the modules correctly for multiversion support. I=
+f "require" is not specified as a dependency, then there will likely be an =
+error.</p>
+
+<h3><a href=3D"https://requirejs.org/docs/api.html#afterload" name=3D"after=
+load">Loading Code After Page Load</a><span class=3D"sectionMark">=C2=A7 4.=
+3</span></h3>
+
+<p>The example above in the <strong>Multiversion Support</strong> section s=
+hows how code can later be loaded by nested require() calls. </p>
+
+<h3><a href=3D"https://requirejs.org/docs/api.html#webworker" name=3D"webwo=
+rker">Web Worker Support</a><span class=3D"sectionMark">=C2=A7 4.4</span></=
+h3>
+
+<p>As of release 0.12, RequireJS can be run inside a Web Worker. Just use i=
+mportScripts() inside a web worker to load require.js (or the JS file that =
+contains the require() definition), then call require.</p>
+
+<p>You will likely need to set the <strong>baseUrl</strong> <a href=3D"http=
+s://requirejs.org/docs/api.html#config">configuration option</a> to make su=
+re require() can find the scripts to load.</p>
+
+<p>You can see an example of its use by looking at one of the files used in=
+ <a href=3D"https://github.com/requirejs/requirejs/blob/master/tests/worker=
+s.js">the unit test</a>.</p>
+
+<h3><a href=3D"https://requirejs.org/docs/api.html#rhino" name=3D"rhino">Rh=
+ino Support</a><span class=3D"sectionMark">=C2=A7 4.5</span></h3>
+
+<p>RequireJS can be used in Rhino via the <a href=3D"https://requirejs.org/=
+docs/download.html#rjs">r.js adapter</a>.
+See <a href=3D"https://github.com/requirejs/r.js/blob/master/README.html">t=
+he r.js README</a> for more information.</p>
+
+<h3><a href=3D"https://requirejs.org/docs/api.html#nashorn" name=3D"nashorn=
+">Nashorn Support</a><span class=3D"sectionMark">=C2=A7 4.6</span></h3>
+
+<p>As of RequireJS 2.1.16, RequireJS can be used in <a href=3D"http://www.o=
+racle.com/technetwork/articles/java/jf14-nashorn-2126515.html">Nashorn</a>,=
+ Java 8+'s JavaScript engine, via the <a href=3D"https://requirejs.org/docs=
+/download.html#rjs">r.js adapter</a>.
+See <a href=3D"https://github.com/requirejs/r.js/blob/master/README.html">t=
+he r.js README</a> for more information.</p>
+
+<h3><a href=3D"https://requirejs.org/docs/api.html#errors" name=3D"errors">=
+Handling Errors</a><span class=3D"sectionMark">=C2=A7 4.7</span></h3>
+
+<p>The general class of errors are 404s for scripts (not found), network ti=
+meouts or errors in the scripts that are loaded. RequireJS has a few tools =
+to deal with them: require-specific errbacks, a "paths" array config, and a=
+ global requirejs.onError.</p>
+
+<p>The error object passed to errbacks and the global requirejs.onError fun=
+ction will usually contain two custom properties:</p>
+
+<ul>
+<li><strong>requireType</strong>: A string value with a general classificat=
+ion, like "timeout", "nodefine", "scripterror".</li>
+<li><strong>requireModules</strong>: an array of module names/URLs that tim=
+ed out.</li>
+</ul>
+
+<p>If you get an error with a requireModules, it probably means other modul=
+es that depend on the modules in that requireModules array are not defined.=
+</p>
+
+<h4>
+<a href=3D"https://requirejs.org/docs/api.html#ieloadfail" name=3D"ieloadfa=
+il">Catching load failures in IE</a>
+<span class=3D"sectionMark">=C2=A7 4.6.1</span>
+</h4>
+
+<p>Internet Explorer has a set of problems that make it difficult to detect=
+ load failures for errbacks/paths fallbacks:</p>
+
+<ul>
+    <li>script.onerror does not work in IE 6-8. There is no way to know if =
+loading a script generates a 404, worse, it triggers the onreadystatechange=
+ with a complete state even in a 404 case.</li>
+    <li>script.onerror does work in IE 9+, but it has a bug where it does n=
+ot fire script.onload event handlers right after execution of script, so it=
+ cannot support the standard method of allowing anonymous AMD modules. So s=
+cript.onreadystatechange is still used. However, onreadystatechange fires w=
+ith a complete state before the script.onerror function fires.</li>
+</ul>
+
+<p>So it is very difficult with IE to allow both anonymous AMD modules, whi=
+ch are a core benefit of AMD modules, and reliable detect errors.</p>
+
+<p>However, if you are in a project that you know uses define() to declare =
+all of its modules, or it uses the <a href=3D"https://requirejs.org/docs/ap=
+i.html#config-shim">shim</a> config to specify string exports for anything =
+that does not use define(), then if you set the <a href=3D"https://requirej=
+s.org/docs/api.html#config-enforceDefine">enforceDefine</a> config value to=
+ true, the loader can confirm if a script load by checking for the define()=
+ call or the existence of the shim's exports global value.</p>
+
+<p>So if you want to support Internet Explorer, catch load errors, and have=
+ modular code either through direct define() calls or shim config, always s=
+et <b>enforceDefine</b> to be true. See the next section for an example.</p=
+>
+
+<p><b>NOTE</b>: If you do set enforceDefine: true, and you use data-main=3D=
+"" to load your main JS module, then that main JS module <b>must call defin=
+e()</b> instead of require() to load the code it needs. The main JS module =
+can still call require/requirejs to set config values, but for loading modu=
+les it should use define().</p>
+
+<p>If you then also use <a href=3D"https://github.com/requirejs/almond">alm=
+ond</a> to build your code without require.js, be sure to use the <a href=
+=3D"https://github.com/requirejs/r.js/blob/master/build/example.build.js#L4=
+13">insertRequire</a> build setting to insert a require call for the main m=
+odule -- that serves the same purpose of the initial require() call that da=
+ta-main does.</p>
+
+<h4>
+<a href=3D"https://requirejs.org/docs/api.html#errbacks" name=3D"errbacks">=
+require([]) errbacks</a>
+<span class=3D"sectionMark">=C2=A7 4.6.2</span>
+</h4>
+
+<p>Errbacks, when used with <a href=3D"https://requirejs.org/docs/api.html#=
+undef">requirejs.undef()</a>, will allow you to detect if a module fails to=
+ load, undefine
+that module, reset the config to a another location, then try again.</p>
+
+<p>A common use case for this is to use a CDN-hosted version of a library, =
+but if
+that fails, switch to loading the file locally:</p>
+
+<pre><code>requirejs.config({
+    enforceDefine: true,
+    paths: {
+        jquery: 'http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.m=
+in'
+    }
+});
+
+//Later
+require(['jquery'], function ($) {
+    //Do something with $ here
+}, function (err) {
+    //The errback, error callback
+    //The error has a list of modules that failed
+    var failedId =3D err.requireModules &amp;&amp; err.requireModules[0];
+    if (failedId =3D=3D=3D 'jquery') {
+        //undef is function only on the global requirejs object.
+        //Use it to clear internal knowledge of jQuery. Any modules
+        //that were dependent on jQuery and in the middle of loading
+        //will not be loaded yet, they will wait until a valid jQuery
+        //does load.
+        requirejs.undef(failedId);
+
+        //Set the path to jQuery to local path
+        requirejs.config({
+            paths: {
+                jquery: 'local/jquery'
+            }
+        });
+
+        //Try again. Note that the above require callback
+        //with the "Do something with $ here" comment will
+        //be called if this new attempt to load jQuery succeeds.
+        require(['jquery'], function () {});
+    } else {
+        //Some other error. Maybe show message to the user.
+    }
+});
+</code></pre>
+
+<p>With `requirejs.undef()`, if you later set up a different config and try=
+ to
+load the same module, the loader will still remember which modules needed
+that dependency and finish loading them when the newly configured module lo=
+ads.</p>
+
+<p><b>Note</b>: errbacks only work with callback-style require calls, not d=
+efine()
+calls. define() is only for declaring modules.</p>
+
+<h4>
+<a href=3D"https://requirejs.org/docs/api.html#pathsfallbacks" name=3D"path=
+sfallbacks">paths config fallbacks</a>
+<span class=3D"sectionMark">=C2=A7 4.6.3</span>
+</h4>
+
+<p>The above pattern for detecting a load failure, undef()ing a module, mod=
+ifying paths and reloading is a common enough request that there is also a =
+shorthand for it. The paths config allows array values:</p>
+
+<pre><code>requirejs.config({
+    //To get timely, correct error triggers in IE, force a define/shim expo=
+rts check.
+    enforceDefine: true,
+    paths: {
+        jquery: [
+            'http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min',
+            //If the CDN location fails, load from this location
+            'lib/jquery'
+        ]
+    }
+});
+
+//Later
+require(['jquery'], function ($) {
+});
+</code></pre>
+
+<p>This above code will try the CDN location, but if that fails, fall back =
+to the local lib/jquery.js location.</p>
+
+<p><b>Note</b>: paths fallbacks only work for exact module ID matches. This=
+ is
+different from normal paths config which can apply to any part of a module =
+ID
+prefix segment. Fallbacks are targeted more for unusual error recovery, not
+a generic path search path solution, since those are inefficient in the bro=
+wser.</p>
+
+<h4>
+<a href=3D"https://requirejs.org/docs/api.html#requirejsonerror" name=3D"re=
+quirejsonerror">Global requirejs.onError function</a>
+<span class=3D"sectionMark">=C2=A7 4.6.4</span>
+</h4>
+
+<p>To detect errors that are not caught by local errbacks, you can override=
+ requirejs.onError():</p>
+
+<pre><code>requirejs.onError =3D function (err) {
+    console.log(err.requireType);
+    if (err.requireType =3D=3D=3D 'timeout') {
+        console.log('modules: ' + err.requireModules);
+    }
+
+    throw err;
+};
+</code></pre>
+
+</div>
+
+<div class=3D"section">
+<h2>
+<a href=3D"https://requirejs.org/docs/api.html#plugins" name=3D"plugins">Lo=
+ader Plugins</a>
+<span class=3D"sectionMark">=C2=A7 5</span>
+</h2>
+
+<p>RequireJS supports <a href=3D"https://requirejs.org/docs/plugins.html">l=
+oader plugins</a>. This is a way to support dependencies that are not plain=
+ JS files, but are still important for a script to have loaded before it ca=
+n do its work. The RequireJS wiki has <a href=3D"https://github.com/require=
+js/requirejs/wiki/Plugins">a list of plugins</a>. This section talks about =
+some specific plugins that are maintained alongside RequireJS:</p>
+
+<h3><a href=3D"https://requirejs.org/docs/api.html#text" name=3D"text">Spec=
+ify a Text File Dependency</a><span class=3D"sectionMark">=C2=A7 5.1</span>=
+</h3>
+
+<p>It is nice to build HTML using regular HTML tags, instead of building up=
+ DOM structures in script. However, there is no good way to embed HTML in a=
+ JavaScript file. The best that can be done is using a string of HTML, but =
+that can be hard to manage, particularly for multi-line HTML.</p>
+
+<p>RequireJS has a plugin, text.js, that can help with this issue. It will =
+automatically be loaded if the text! prefix is used for a dependency. See t=
+he
+<a href=3D"https://github.com/requirejs/text">text.js README</a> for more i=
+nformation.</p>
+
+<h3><a href=3D"https://requirejs.org/docs/api.html#pageload" name=3D"pagelo=
+ad">Page Load Event Support/DOM Ready</a><span class=3D"sectionMark">=C2=A7=
+ 5.2</span></h3>
+
+<p>It is possible when using RequireJS to load scripts quickly enough that =
+they complete before the DOM is ready. Any work that tries to interact with=
+ the DOM should wait for the DOM to be ready. For modern browsers, this is =
+done by waiting for the DOMContentLoaded event.</p>
+
+<p>However, not all browsers in use support DOMContentLoaded. The domReady =
+module implements a cross-browser method to determine when the DOM is ready=
+. <a href=3D"https://requirejs.org/docs/download.html#domReady">Download th=
+e module</a> and use it in your project like so:</p>
+
+<pre><code>require(['domReady'], function (domReady) {
+  domReady(function () {
+    //This function is called once the DOM is ready.
+    //It will be safe to query the DOM and manipulate
+    //DOM nodes in this function.
+  });
+});
+</code></pre>
+
+<p>Since DOM ready is a common application need, ideally the nested functio=
+ns
+in the API above could be avoided. The domReady module also implements the =
+<a href=3D"https://requirejs.org/docs/plugins.html">Loader Plugin API</a>,
+so you can use the loader plugin syntax (notice the <b>!</b> in the domRead=
+y dependency) to force the
+require() callback function to wait for the DOM to be ready before executin=
+g. </p><pre>domReady</pre> will return
+the current document when used as a loader plugin:<p></p>
+
+<pre><code>require(['domReady!'], function (doc) {
+    //This function is called once the DOM is ready,
+    //notice the value for 'domReady!' is the current
+    //document.
+});
+</code></pre>
+
+<p><b>Note:</b> If the document takes a while to load (maybe it is a very l=
+arge document, or has HTML script tags loading large JS files that block DO=
+M completion until they are done), using domReady as a loader plugin may re=
+sult in a RequireJS "timeout" error. If this is a problem either increase t=
+he <a href=3D"https://requirejs.org/docs/api.html#config-waitSeconds">waitS=
+econds</a> configuration, or just use domReady as a module and
+call domReady() inside the require() callback.</p>
+
+<h3><a href=3D"https://requirejs.org/docs/api.html#i18n" name=3D"i18n">Defi=
+ne an I18N Bundle</a><span class=3D"sectionMark">=C2=A7 5.3</span></h3>
+
+<p>Once your web app gets to a certain size and popularity, localizing the =
+strings in the interface and providing other locale-specific information be=
+comes more useful. However, it can be cumbersome to work out a scheme that =
+scales well for supporting multiple locales.</p>
+
+<p>RequireJS allows you to set up a basic module that has localized informa=
+tion without forcing you to provide all locale-specific information up fron=
+t. It can be added over time, and only strings/values that change between l=
+ocales can be defined in the locale-specific file.</p>
+
+<p>i18n bundle support is provided by the i18n.js plugin. It is automatical=
+ly loaded when a module or dependency specifies the i18n! prefix (more info=
+ below). <a href=3D"https://requirejs.org/docs/download.html#i18n">Download=
+ the plugin</a> and put it in the same directory as your app's main JS file=
+.</p>
+
+<p>To define a bundle, put it in a directory called "nls" -- the i18n! plug=
+in assumes a module name with "nls" in it indicates an i18n bundle. The "nl=
+s" marker in the name tells the i18n plugin where to expect the locale dire=
+ctories (they should be immediate children of the nls directory). If you wa=
+nted to provide a bundle of color names in your "my" set of modules, create=
+ the directory structure like so:</p>
+
+<ul>
+<li>my/nls/colors.js</li>
+</ul>
+
+<p>The contents of that file should look like so:</p>
+
+<pre><code>//my/nls/colors.js contents:
+define({
+    "root": {
+        "red": "red",
+        "blue": "blue",
+        "green": "green"
+    }
+});
+</code></pre>
+
+<p>An object literal with a property of "root" defines this module. That is=
+ all you have to do to set the stage for later localization work.</p>
+
+<p>You can then use the above module in another module, say, in a my/lamps.=
+js file:</p>
+
+<pre><code>//Contents of my/lamps.js
+define(["i18n!my/nls/colors"], function(colors) {
+    return {
+        testMessage: "The name for red in this locale is: " + colors.red
+    }
+});
+</code></pre>
+
+<p>The my/lamps module has one property called "testMessage" that uses colo=
+rs.red to show the localized value for the color red.</p>
+
+<p>Later, when you want to add a specific translation to a file, say for th=
+e fr-fr locale, change my/nls/colors to look like so:</p>
+
+<pre><code>//Contents of my/nls/colors.js
+define({
+    "root": {
+        "red": "red",
+        "blue": "blue",
+        "green": "green"
+    },
+    "fr-fr": true
+});
+</code></pre>
+
+<p>Then define a file at my/nls/fr-fr/colors.js that has the following cont=
+ents:</p>
+
+<pre><code>//Contents of my/nls/fr-fr/colors.js
+define({
+    "red": "rouge",
+    "blue": "bleu",
+    "green": "vert"
+});
+</code></pre>
+
+<p>RequireJS will use the browser's navigator.languages, navigator.language=
+ or navigator.userLanguage property to determine what locale values to use =
+for my/nls/colors, so your app does not have to change. If you prefer to se=
+t the locale, you can use the <a href=3D"https://requirejs.org/docs/api.htm=
+l#config-moduleconfig">module config</a> to pass the locale to the plugin:<=
+/p>
+
+<pre><code>requirejs.config({
+    config: {
+        //Set the config for the i18n
+        //module ID
+        i18n: {
+            locale: 'fr-fr'
+        }
+    }
+});
+</code></pre>
+
+<p><strong>Note</strong> that RequireJS will always use a lowercase version=
+ of the locale, to avoid case issues, so all of the directories and files o=
+n disk for i18n bundles should use lowercase locales.</p>
+
+<p>RequireJS is also smart enough to pick the right locale bundle, the one =
+that most closely matches the ones provided by my/nls/colors. For instance,=
+ if the locale is "en-us", then the "root" bundle will be used. If the loca=
+le is "fr-fr-paris" then the "fr-fr" bundle will be used.</p>
+
+<p>RequireJS also combines bundles together, so for instance, if the french=
+ bundle was defined like so (omitting a value for red):</p>
+
+<pre><code>//Contents of my/nls/fr-fr/colors.js
+define({
+    "blue": "bleu",
+    "green": "vert"
+});
+</code></pre>
+
+<p>Then the value for red in "root" will be used. This works for all locale=
+ pieces. If all the bundles listed below were defined, then RequireJS will =
+use the values in the following priority order (the one at the top takes th=
+e most precedence):</p>
+
+<ul>
+<li>my/nls/fr-fr-paris/colors.js</li>
+<li>my/nls/fr-fr/colors.js</li>
+<li>my/nls/fr/colors.js</li>
+<li>my/nls/colors.js</li>
+</ul>
+
+<p>If you prefer to not include the root bundle in the top level module, yo=
+u can define it like a normal locale bundle. In that case, the top level mo=
+dule would look like:</p>
+
+<pre><code>//my/nls/colors.js contents:
+define({
+    "root": true,
+    "fr-fr": true,
+    "fr-fr-paris": true
+});
+</code></pre>
+
+<p>and the root bundle would look like:</p>
+
+<pre><code>//Contents of my/nls/root/colors.js
+define({
+    "red": "red",
+    "blue": "blue",
+    "green": "green"
+});
+</code></pre>
+
+</div>
+    </div>
+    <div id=3D"footer" class=3D"mono">
+        <span class=3D"line">Latest Release: <a href=3D"https://requirejs.o=
+rg/docs/download.html">2.3.6</a></span>
+        <span class=3D"line">Code is open source: <a href=3D"https://github=
+.com/requirejs/requirejs/blob/master/LICENSE">new BSD or MIT licensed</a></=
+span>
+        <span class=3D"line">logo and web design by <a href=3D"http://andyc=
+hung.me/">Andy Chung</a> <a href=3D"https://github.com/requirejs/requirejs-=
+branding">=C2=A9 2010-2018</a></span>
+    </div>
+</div>
+
+
+
+</body></html>
+------MultipartBoundary--P2eopmYoMS5k8SVC2kZ38m5o9jpMVl2la99L1MoEZE----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://requirejs.org/main.css
+
+@charset "utf-8";
+
+@font-face { font-family: Inconsolata; src: url("fonts/Inconsolata.ttf"); }
+
+* { box-sizing: border-box; margin: 0px; padding: 0px; }
+
+body { font-size: 12px; line-height: 21px; background-color: rgb(255, 255, =
+255); font-family: "Helvetica Neue", Helvetica, Arial, Verdana, sans-serif;=
+ color: rgb(10, 10, 10); }
+
+#wrapper { margin: 0px; }
+
+#grid { position: fixed; top: 0px; left: 0px; width: 796px; background-imag=
+e: url("i/grid.png"); z-index: 100; }
+
+pre { line-height: 18px; font-size: 13px; margin: 7px 0px 21px; padding: 5p=
+x 10px; overflow: auto; background-color: rgb(250, 250, 250); border: 1px s=
+olid rgb(230, 230, 230); border-radius: 5px; box-shadow: rgba(0, 0, 0, 0.05=
+) 0px 2px 5px; }
+
+.mono { font-family: Inconsolata, "Andale Mono", Monaco, monospace; }
+
+.sans { font-family: "Helvetica Neue", Helvetica, Arial, Verdana, sans-seri=
+f; }
+
+.serif { font-family: Georgia, "Times New Roman", Times, serif; }
+
+a { color: rgb(46, 135, 221); text-decoration: none; }
+
+a:hover { text-decoration: underline; }
+
+#navBg { background-color: rgb(242, 242, 242); background-image: url("i/sha=
+dow.png"); background-position: right top; background-repeat: repeat-y; wid=
+th: 220px; position: fixed; top: 0px; left: 0px; z-index: 0; }
+
+#nav { background-image: url("i/logo.png"); background-repeat: no-repeat; b=
+ackground-position: center 10px; width: 220px; float: left; margin: 0px; pa=
+dding: 150px 20px 0px; font-size: 13px; text-shadow: rgb(255, 255, 255) 1px=
+ 1px; position: relative; z-index: 1; }
+
+#nav .homeImageLink { position: absolute; display: block; top: 10px; left: =
+0px; width: 220px; height: 138px; }
+
+#nav ul { list-style-type: none; padding: 0px; margin: 21px 0px 0px; }
+
+#nav ul li { width: 100%; }
+
+#nav ul li.version { text-align: center; color: rgb(77, 77, 77); }
+
+#nav h1 { color: rgb(77, 77, 77); text-align: center; font-size: 15px; font=
+-weight: normal; text-transform: uppercase; letter-spacing: 3px; }
+
+span.spacer { color: rgb(46, 135, 221); margin: 0px 3px 0px 5px; background=
+-image: url("i/dot.png"); background-repeat: repeat-x; background-position:=
+ left 13px; }
+
+span.icon { width: 16px; display: block; background-image: url("i/sprite.pn=
+g"); background-repeat: no-repeat; }
+
+span.icon.home { background-position: center 5px; }
+
+span.icon.start { background-position: center -27px; }
+
+span.icon.download { background-position: center -59px; }
+
+span.icon.api { background-position: center -89px; }
+
+span.icon.optimize { background-position: center -119px; }
+
+span.icon.script { background-position: center -150px; }
+
+span.icon.question { background-position: center -182px; }
+
+span.icon.requirement { background-position: center -214px; }
+
+span.icon.history { background-position: center -247px; }
+
+span.icon.help { background-position: center -279px; }
+
+span.icon.blog { background-position: center -311px; }
+
+span.icon.twitter { background-position: center -343px; }
+
+span.icon.git { background-position: center -375px; }
+
+span.icon.fork { background-position: center -407px; }
+
+#content { margin: 0px 0px 0px 220px; padding: 0px 20px; background-color: =
+rgb(255, 255, 255); font-family: Georgia, "Times New Roman", Times, serif; =
+position: relative; }
+
+#content p { padding: 7px 0px; color: rgb(51, 51, 51); font-size: 14px; }
+
+#content h1, #content h2, #content h3, #content h4, #content h5 { font-weig=
+ht: normal; padding: 21px 0px 7px; }
+
+#content h1 { font-size: 21px; }
+
+#content h2 { padding: 0px 0px 18px; margin: 0px 0px 7px; font-weight: norm=
+al; font-size: 21px; line-height: 24px; text-align: center; color: rgb(34, =
+34, 34); background-image: url("i/arrow.png"); background-repeat: no-repeat=
+; background-position: center bottom; font-family: Inconsolata, "Andale Mon=
+o", Monaco, monospace; text-transform: uppercase; letter-spacing: 2px; text=
+-shadow: rgb(255, 255, 255) 1px 1px 0px; }
+
+#content h2 a { color: rgb(34, 34, 34); }
+
+#content h2 a:hover, #content h3 a:hover, #content h4 a:hover { text-decora=
+tion: none; }
+
+span.sectionMark { display: block; color: rgb(170, 170, 170); text-shadow: =
+rgb(255, 255, 255) 1px 1px 0px; font-size: 15px; font-family: Inconsolata, =
+"Andale Mono", Monaco, monospace; }
+
+#content h3 { font-size: 17px; }
+
+#content h4 { padding-top: 0px; font-size: 15px; }
+
+#content h5 { font-size: 10px; }
+
+#content ul { list-style-type: disc; }
+
+#content ul, #content ol { color: rgb(51, 51, 51); font-size: 14px; list-st=
+yle-position: outside; margin: 7px 0px 21px; }
+
+#content ul { font-style: italic; }
+
+#content ol { border: none; list-style-position: inside; padding: 0px; font=
+-family: Georgia, "Times New Roman", Times, serif; }
+
+#content ul ul, #content ol ol { border: none; padding: 0px; margin: 0px 0p=
+x 0px 28px; }
+
+#content .section { padding: 48px 0px; background-image: url("i/line.png");=
+ background-repeat: no-repeat; background-position: center bottom; width: 5=
+76px; margin: 0px auto; }
+
+#content .section .subSection { padding: 0px 0px 0px 48px; margin: 28px 0px=
+ 0px; display: block; border-left: 2px solid rgb(221, 221, 221); }
+
+#content .section:last-child { background-image: none; }
+
+#content .note { color: rgb(34, 34, 34); background-color: rgb(255, 255, 15=
+3); padding: 5px 10px; margin: 7px 0px; display: inline-block; }
+
+#content #directory.section { background-color: rgb(255, 255, 255); width: =
+576px; }
+
+#content #directory.section ul ul ul { margin: 0px 0px 0px 48px; }
+
+#content #directory.section ul ul li { background-image: url("i/sprite.png"=
+); background-repeat: no-repeat; background-position: left -437px; padding-=
+left: 18px; font-style: normal; }
+
+#content #directory h1 { padding: 0px 0px 65px; margin: 0px 0px 14px; font-=
+weight: normal; font-size: 21px; text-align: center; text-transform: upperc=
+ase; letter-spacing: 2px; color: rgb(34, 34, 34); background-image: url("i/=
+arrow-x.png"); background-repeat: no-repeat; background-position: center bo=
+ttom; font-family: Inconsolata, "Andale Mono", Monaco, monospace; }
+
+#content ul.index { padding: 0px; background-color: transparent; border: no=
+ne; font-style: normal; font-family: Inconsolata, "Andale Mono", Monaco, mo=
+nospace; }
+
+#content ul.index li { width: 100%; font-size: 15px; color: rgb(51, 51, 51)=
+; padding: 0px 0px 7px; }
+
+#content #intro { width: 576px; margin: 0px auto; padding: 21px 0px; }
+
+#content #intro p, #content #intro h1 { font-size: 19px; line-height: 28px;=
+ color: green; letter-spacing: 2px; padding: 0px 0px 28px; }
+
+#content #intro p:last-child, #content #intro h1:last-child { padding: 0px;=
+ }
+
+#content #intro p a { color: green; text-decoration: underline; }
+
+#content .section h4 { text-align: center; }
+
+#content .section h4 a.download { display: inline-block; margin-top: 1em; }
+
+#content h4 a.download { border-radius: 5px; background-color: rgb(242, 242=
+, 242); background-image: url("i/sprite.png"), -webkit-gradient(linear, 0% =
+0%, 0% 100%, from(rgb(250, 250, 250)), to(rgb(242, 242, 242))); background-=
+position: 7px -58px, center center; background-repeat: no-repeat, no-repeat=
+; border: 1px solid rgb(204, 204, 204); color: rgb(51, 51, 51); font-size: =
+12px; margin: 0px 0px 0px 5px; padding: 0px 10px 0px 25px; text-shadow: rgb=
+(255, 255, 255) 1px 1px 0px; }
+
+#footer { color: rgb(77, 77, 77); padding: 65px 20px 20px; margin: 20px 0px=
+ 0px 220px; text-align: center; display: block; font-size: 13px; background=
+-image: url("i/arrow-x.png"); background-repeat: no-repeat; background-posi=
+tion: center top; background-color: rgb(255, 255, 255); }
+
+#footer .line { display: block; }
+
+#footer .line a { color: rgb(77, 77, 77); text-decoration: underline; }
+
+code { background-color: rgb(250, 250, 250); color: rgb(51, 51, 51); }
+
+code .comment { color: green; font-style: italic; }
+
+code .comment.preproc { color: rgb(0, 153, 153); font-style: normal; }
+
+code .comment.special { font-weight: bold; }
+
+code .keyword { color: rgb(0, 102, 153); font-weight: bold; }
+
+code .keyword.pseudo { font-weight: normal; }
+
+code .keyword.type { color: rgb(0, 119, 136); }
+
+code .operator { color: rgb(85, 85, 85); }
+
+code .operator.word { color: rgb(0, 0, 0); font-weight: bold; }
+
+code .name.builtin { color: rgb(51, 102, 102); }
+
+code .name.function { color: rgb(204, 0, 255); }
+
+code .name.class { color: rgb(0, 170, 136); font-weight: bold; }
+
+code .name.namespace { color: rgb(0, 204, 255); font-weight: bold; }
+
+code .name.exception { color: rgb(204, 0, 0); font-weight: bold; }
+
+code .name.variable { color: rgb(0, 51, 51); }
+
+code .name.constant { color: rgb(51, 102, 0); }
+
+code .name.label { color: rgb(153, 153, 255); }
+
+code .name.entity { color: rgb(153, 153, 153); font-weight: bold; }
+
+code .name.attribute { color: rgb(51, 0, 153); }
+
+code .name.tag { color: rgb(51, 0, 153); font-weight: bold; }
+
+code .name.decorator { color: rgb(153, 153, 255); }
+
+code .string { color: rgb(204, 51, 0); }
+
+code .string.doc { font-style: italic; }
+
+code .string.interpol { color: rgb(170, 0, 0); }
+
+code .string.escape { color: rgb(204, 51, 0); font-weight: bold; }
+
+code .string.regex { color: rgb(51, 170, 170); }
+
+code .string.symbol { color: rgb(255, 204, 51); }
+
+code .string.other { color: rgb(204, 51, 0); }
+
+code .number { color: rgb(255, 102, 0); }
+
+pre::-webkit-scrollbar { width: 6px; height: 6px; }
+
+pre::-webkit-scrollbar-button:start:decrement, pre::-webkit-scrollbar-butto=
+n:end:increment { display: block; height: 0px; width: 0px; }
+
+pre::-webkit-scrollbar-button:vertical:increment, pre::-webkit-scrollbar-bu=
+tton:horizontal:increment { background-color: transparent; display: block; =
+height: 0px; width: 0px; }
+
+pre::-webkit-scrollbar-track-piece { border-radius: 3px; }
+
+pre::-webkit-scrollbar-thumb:vertical { background-color: rgb(170, 170, 170=
+); border-radius: 3px; }
+
+pre::-webkit-scrollbar-thumb:horizontal { background-color: rgb(170, 170, 1=
+70); border-radius: 3px; }
+
+.hbox { display: -webkit-box; -webkit-box-orient: horizontal; -webkit-box-a=
+lign: stretch; width: 100%; }
+
+.hbox > * { -webkit-box-flex: 0; display: block; }
+
+.vbox { display: -webkit-box; -webkit-box-orient: vertical; -webkit-box-ali=
+gn: stretch; }
+
+.vbox > * { -webkit-box-flex: 0; display: block; }
+
+.spacer { -webkit-box-flex: 1; }
+
+.reverse { -webkit-box-direction: reverse; }
+
+.boxFlex0 { -webkit-box-flex: 0; }
+
+.boxFlex1, .boxFlex { -webkit-box-flex: 1; }
+
+.boxFlex2 { -webkit-box-flex: 2; }
+
+.boxGroup1 { -webkit-box-flex-group: 1; }
+
+.boxGroup2 { -webkit-box-flex-group: 2; }
+
+.start { -webkit-box-pack: start; }
+
+.end { -webkit-box-pack: end; }
+
+.center { -webkit-box-pack: center; }
+
+.clearfix::after { content: "."; display: block; clear: both; visibility: h=
+idden; line-height: 0; height: 0px; }
+
+html[xmlns] .clearfix { display: block; }
+
+* html .clearfix { height: 1%; }
+
+.off-canvas-button { display: none; }
+
+@media (max-width: 840px) {
+  #navBg { display: none; }
+  #navBg, #nav { background-image: none; }
+  .homeImageLink { background-image: url("i/logo.png"); }
+  #nav { left: -220px; position: fixed; display: block; height: 100%; backg=
+round-color: rgb(242, 242, 242); overflow: auto; box-shadow: rgba(0, 0, 0, =
+0.3) -20px -10px 10px -20px inset; transition: left 0.4s ease-out; }
+  .off-canvas-button { background: none; border: none; position: absolute; =
+left: 15px; display: block; top: 0px; z-index: 10; width: 30px; height: 30p=
+x; cursor: pointer; transition: left 0.4s ease-out; }
+  .off-canvas-button > span { color: rgb(77, 77, 77); width: 30px; position=
+: absolute; left: 0px; transition: opacity 0.4s ease-out; }
+  .off-canvas-button .lines { opacity: 1; }
+  .off-canvas-button .line { border-radius: 10px; height: 4px; margin-botto=
+m: 4px; float: left; width: 100%; background-color: rgb(77, 77, 77); }
+  .off-canvas-button .cross { opacity: 0; font-size: 35px; line-height: 20p=
+x; }
+  .off-canvas-button.open { left: 230px; }
+  .off-canvas-button.open .cross { opacity: 1; }
+  .off-canvas-button.open .lines { opacity: 0; }
+  #nav.open { left: 0px; }
+  #content, #footer { margin-left: 0px; }
+  #content .section { width: 100% !important; }
+}
+------MultipartBoundary--P2eopmYoMS5k8SVC2kZ38m5o9jpMVl2la99L1MoEZE----
+Content-Type: font/ttf
+Content-Transfer-Encoding: base64
+Content-Location: https://requirejs.org/fonts/Inconsolata.ttf
+
+AAEAAAAPAIAAAwBwRkZUTVD8kwgAAHxYAAAAHEdERUYBlgAEAAB8OAAAACBPUy8yXZcJaQAAAXgA
+AABgY21hcBn2PfMAAAd4AAADZmZwZ21oAoyFAAAK4AAAAAdnYXNw//8AAwAAfDAAAAAIZ2x5Znbk
+reAAAA3EAABjeGhlYWTxYnQDAAAA/AAAADZoaGVhBZ0CogAAATQAAAAkaG10eHOgSqgAAAHYAAAF
+oGxvY2FQzGlkAAAK8AAAAtRtYXhwAbAASwAAAVgAAAAgbmFtZcUMyHQAAHE8AAADSHBvc3QRzDzI
+AAB0hAAAB6pwcmVwaAaMhQAACugAAAAHAAEAAAABAtCPvh0lXw889QALA+gAAAAAyCMW3gAAAADI
+IxbeAAD/TwH9A0MAAAAIAAIAAAAAAAAAAQAAA0P/TwBaAfQAAP/3Af0AAQAAAAAAAAAAAAAAAAAA
+AWcAAQAAAWkASAAFAAAAAAACAAAAAQABAAAAQAAAAAAAAAADAfQB9AAFAAgCigK8AAAAjAKKArwA
+AAHgADEBAgAAAgsGCQMAAwAAAIAAAC8AAAFrAAAAAAAAAABQZkVkAEAAICQjAzT/TAAAA0MAsQAA
+ABMAAAAAAckCbwAAACAAAQH0AAAAAAAAAU0AAAH0AAAB9AC0AfQAbwH0ABkB9AA8AfQAHAH0ACQB
+9ADOAfQAiwH0AEgB9AApAfQALQH0AKUB9ABHAfQAswH0AEAB9AAyAfQAWAH0AEkB9ABFAfQAMAH0
+AEAB9ABDAfQATwH0ADwB9ABEAfQAswH0AKUB9AAjAfQALQH0ACgB9ABAAfQAHwH0AA8B9AAwAfQA
+KQH0ADYB9AA7AfQATgH0ACQB9AA2AfQAUQH0ADEB9AAqAfQAQgH0ACkB9AAyAfQAHQH0ADsB9AAd
+AfQAOAH0ADQB9AAfAfQAMgH0ABkB9AARAfQAKQH0ABwB9AAyAfQAgwH0AEAB9ABTAfQAXQH0ACMB
+9ACLAfQAMQH0ADwB9AA4AfQALQH0ADEB9AA/AfQAJgH0AEYB9ABkAfQAMAH0AEIB9ABPAfQAJgH0
+AEQB9AAoAfQAPAH0ACoB9ABjAfQAOQH0AEYB9AA+AfQAKAH0ABAB9AAvAfQAFgH0ADIB9AA1AfQA
+2QH0AFwB9AApAfQAAAH0ALQB9AAwAfQAJwH0AEQB9AAkAfQA2QH0AEEB9ABwAfQADgH0AEwB9ABD
+AfQAWwH0AEcB9AAOAfQAewH0AHkB9AAtAfQAbwH0AHAB9ADMAfQAGAH0AEAB9ACzAfQAnQH0AHoB
+9ABMAfQAQwH0AAUB9AAFAfQACwH0AEMB9AAPAfQADwH0AA8B9AAPAfQADwH0AA8B9AAEAfQAKQH0
+ADsB9AA7AfQAOwH0ADsB9ABRAfQAUQH0AFEB9ABRAfQAHgH0ADIB9AAdAfQAHQH0AB0B9AAdAfQA
+HQH0AFUB9AAdAfQAMgH0ADIB9AAyAfQAMgH0ABwB9AA7AfQANwH0ADEB9AAxAfQAMQH0ADEB9AAx
+AfQAMQH0AAoB9AA4AfQAMQH0ADEB9AAxAfQAMQH0AGQB9ABkAfQAZAH0AGQB9AAoAfQARAH0ACgB
+9AAoAfQAKAH0ACgB9AAoAfQARwH0ACgB9AA+AfQAPgH0AD4B9AA+AfQAFgH0ADwB9AAWAfQADwH0
+ADEB9AAPAfQAMQH0ACkB9AA4AfQAKQH0ADgB9AA2AfQAAAH0AB4B9AAmAfQAOwH0ADEB9AA7AfQA
+MQH0ACQB9AAmAfQAUQH0AGQB9ABCAfQAQgH0AE8B9ABCAfQAPQH0ABQB9ABPAfQAMgH0AEQB9AAy
+AfQARAH0ADMB9ABEAfQAKAH0AB0B9AAoAfQACQH0AAYB9AA4AfQAYwH0ADgB9ABjAfQANAH0ADkB
+9AA0AfQAOQH0ADQB9AA5AfQAHwH0AEYB9AAfAfQALAH0ADIB9AA+AfQAMgH0AD4B9AAcAfQAMgH0
+ADIB9AAyAfQAMgH0ADIB9AAyAfQAEgH0ADAB9ACGAfQAhgH0AHsB9AC0AfQAZQH0AMsB9AClAfQB
+FAH0AFsB9AB+AfQAtgH0AKUB9AClAfQATwH0AD0B9AA9AfQAMQH0ADEB9ACrAfQABwH0AJEB9ACR
+AfQATAH0AGYB9AAhAfQAEgH0ADsB9AA7AfQALQH0ADAB6wAAAeMAAAHaAAAB0gAAAckAAAHAAAAB
+uAAAAa8AAAGmAAABngAAAZUAAAGMAAABhAAAAXsAAAFzAAABagAAAWEAAAFZAAABUAAAAUcAAAE/
+AAABNgAAAS4AAAElAAABHAAAARQAAAELAAABAgAAAPoAAADxAAAA6QAAAOAAAADXAAAAzwAAAMYA
+AAC9AAAAtQAAAKwAAACjAAAAmwAAAJIAAACKAAAAgQAAAHgAAABwAAAAZwAAAF4AAABWAAAATQAA
+AEUAAAA8AAAAMwAAACsAAAAiAAAAGQAAABEAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAfQAcgH0AHIB9ACnAfQArQAAAAAB9AA/AGYAPwAAAAMAAAADAAAAHAABAAAAAAFcAAMAAQAA
+ABwABAFAAAAATABAAAUADAB+AP8BBwERARsBHwExAToBPgFEAUgBSwFNAVUBWwFlAXEBfgGSAjcC
+xwLJAssC3SAaIB4gIiAmIDogRCB0IKwhIiGRIZMiEiQj//8AAAAgAKABAgEMARgBHgEwATgBPQFB
+AUcBSgFNAVABWAFeAW4BeAGSAjcCxgLJAssC2CAYIBwgICAmIDkgRCB0IKwhIiGRIZMiEiQj////
+4//C/8D/vP+2/7T/pP+e/5z/mv+Y/5f/lv+U/5L/kP+I/4L/b/7L/j3+PP47/i/g9eD04PPg8ODe
+4NXgpuBv3/rfjN+L3w3c/QABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGAgoAAAAAAQAAAQAAAAAAAAAA
+AAAAAAAAAAEAAgAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAMA
+BAAFAAYABwAIAAkACgALAAwADQAOAA8AEAARABIAEwAUABUAFgAXABgAGQAaABsAHAAdAB4AHwAg
+ACEAIgAjACQAJQAmACcAKAApACoAKwAsAC0ALgAvADAAMQAyADMANAA1ADYANwA4ADkAOgA7ADwA
+PQA+AD8AQABBAEIAQwBEAEUARgBHAEgASQBKAEsATABNAE4ATwBQAFEAUgBTAFQAVQBWAFcAWABZ
+AFoAWwBcAF0AXgBfAGAAYQAAAIYAhwCJAIsAkwCYAJ4AowCiAKQApgClAKcAqQCrAKoArACtAK8A
+rgCwALEAswC1ALQAtgC4ALcAvAC7AL0AvgETAHIAZABlAGkBFQB4AKEAcABrARwAdgBqAAAAiACa
+AAAAcwAAAAAAZwB3AAAAAAAAAAAAAABsAHwAAACoALoAgQBjAG4AAAEBAAAAAABtAH0BFgBiAIIA
+hQCXAOYA5wAAAAABEAERAQ0BDgC5AAAAwQD6ARkBGwEXARgAAAAAARQAeQEPARIAAACEAIwAgwCN
+AIoAjwCQAJEAjgCVAJYAAACUAJwAnQCbANUBAwELAHEBBwEIAQkAegEMAQoBBAAAuAH/hbAAjQC4
+Af+FsASNAAAAAAAAAAAAAAAAKgBUAIoA4AEcAWoBggGkAb4B4AH0AgwCGgIsAjwCcAKCAr4C+AMS
+A0IDggOaA9wEFgQ0BFgEbASABJIE0AUcBTQFbAWiBc4F5gX6Bi4GTgZkBo4GsAbEBt4G+AcoB04H
+lgfACAIIFAhCCFQIcAiKCJ4IugjMCNwI7gkACQ4JLAloCagJ0AoQCkIKbgrGCuwLDAs6C1wLcAuo
+C8oL6AwiDFAMdAyyDOANCA0mDUoNYg2WDbIN8g4ADkQOaA5oDpIO0A8UD0oPbg+CD+YQBBBEEIYQ
+pBC0EMIQ/BEIESYRQhF2EbQRwhH6EhYSKBJIEloSgBKeEswTDhNiE6ATwBPiFAYUOhRqFJoUvBUI
+FSYVRhVoFZYVtBXSFfQWIhZUFowWwhb4FzIXfBfCF9wYGhhOGIIYuhj+GRoZRhmEGcgaDBpUGqwb
+ABtUG7gb+BwwHGgcpBzqHQYdIh1CHWwdqB3mHgweMh5cHpYeyh7uHyQfVB+EH7gf+CAyIG4guCDi
+ITAhXCGqIegiFiJYIooiwiMGIzgjgCOqI+4kEiROJJIk+iUcJTAlUiVuJYolsCXWJfgmGiY+Jmgm
+kCa+JvAnICdEJ4InrifiKDgoaCiUKMoo+ilEKYop5Co8Kooq1Cr+K0IrYCugK+QsJCxgLJYswizm
+LQotMi1aLYItqi3mLgguGi4sLjguRi5eLnAuji6oLsou4C74LxAvKC9SL3wvpi+8L9ov7DAUMCYw
+ODBIMGIwqDDMMOIw+DEGMRgxGDEYMRgxGDEYMRgxGDEYMRgxGDEYMRgxGDEYMRgxGDEYMRgxGDEY
+MRgxGDEYMRgxGDEYMRgxGDEYMRgxGDEYMRgxGDEYMRgxGDEYMRgxGDEYMRgxGDEYMRgxGDEYMRgx
+GDEYMRgxGDEYMRgxGDEYMRgxGDEYMRgxGDEYMRgxGDEqMTwxSjFYMVgxgjGYMbwAAgC0//UBKwKc
+AAcAFwAAJBQGIiY0NjIDMhcWFRQGBwMjAy4BNDc2ASsjMSMjMRcPDhYIARIyDwIIBw1IMSIiMSMC
+MQsSNxZQDP7sARQiSSoRIAAAAgBvAZwBjQKaAAsAFwAAASc0NjIWFA8BJzc2LwE0NjIWFA8BJzc2
+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
+AFIAYQBwAGgAIABMAGUAdgBpAGUAbgAgAHUAcwBpAG4AZwAgAGgAaQBzACAAbwB3AG4AIAB0AG8A
+bwBsAHMAIABhAG4AZAAgAEYAbwBuAHQARgBvAHIAZwBlAC4AIABDAG8AcAB5AHIAaQBnAGgAdAAg
+ADIAMAAwADYAIABSAGEAcABoACAATABlAHYAaQBlAG4ALgAgAFIAZQBsAGUAYQBzAGUAZAAgAHUA
+bgBkAGUAcgAgAHQAaABlACAAQQBwAGEAYwBoAGUAIAAyACAAbABpAGMAZQBuAHMAZQAuAABDcmVh
+dGVkIGJ5IFJhcGggTGV2aWVuIHVzaW5nIGhpcyBvd24gdG9vbHMgYW5kIEZvbnRGb3JnZS4gQ29w
+eXJpZ2h0IDIwMDYgUmFwaCBMZXZpZW4uIFJlbGVhc2VkIHVuZGVyIHRoZSBBcGFjaGUgMiBsaWNl
+bnNlLgAASQBuAGMAbwBuAHMAbwBsAGEAdABhAABJbmNvbnNvbGF0YQAATQBlAGQAaQB1AG0AAE1l
+ZGl1bQAARgBvAG4AdABGAG8AcgBnAGUAIAAyAC4AMAAgADoAIABJAG4AYwBvAG4AcwBvAGwAYQB0
+AGEAIAA6ACAANwAtADIALQAyADAAMAA5AABGb250Rm9yZ2UgMi4wIDogSW5jb25zb2xhdGEgOiA3
+LTItMjAwOQAASQBuAGMAbwBuAHMAbwBsAGEAdABhAABJbmNvbnNvbGF0YQAAVgBlAHIAcwBpAG8A
+bgAgADAAMAAxAC4AMAAxADEAIAAAVmVyc2lvbiAwMDEuMDExIAAASQBuAGMAbwBuAHMAbwBsAGEA
+dABhAABJbmNvbnNvbGF0YQAAAgAAAAAAAP9RADIAAAAAAAAAAAAAAAAAAAAAAAAAAAFpAAAAAQAC
+AAMABAAFAAYABwAIAAkACgALAAwADQAOAA8AEAARABIAEwAUABUAFgAXABgAGQAaABsAHAAdAB4A
+HwAgACEAIgAjACQAJQAmACcAKAApACoAKwAsAC0ALgAvADAAMQAyADMANAA1ADYANwA4ADkAOgA7
+ADwAPQA+AD8AQABBAEIAQwBEAEUARgBHAEgASQBKAEsATABNAE4ATwBQAFEAUgBTAFQAVQBWAFcA
+WABZAFoAWwBcAF0AXgBfAGAAYQCsAKMAhACFAL0AlgDoAIYAjgCLAJ0AqQCkAQIAigDaAIMAkwED
+AQQAjQEFAIgAwwDeAQYAngCqAPUA9AD2AKIArQDJAMcArgBiAGMAkABkAMsAZQDIAMoAzwDMAM0A
+zgDpAGYA0wDQANEArwBnAPAAkQDWANQA1QBoAOsA7QCJAGoAaQBrAG0AbABuAKAAbwBxAHAAcgBz
+AHUAdAB2AHcA6gB4AHoAeQB7AH0AfAC4AKEAfwB+AIAAgQDsAO4AugEHAQgBCQEKAP0A/gD/AQAB
+CwEMAQ0BAQEOAQ8BEAERAPgA+QD6ANcBEgETARQBFQEWAOIA4wEXARgBGQEaARsBHAEdAR4BHwCw
+ALEBIAEhASIBIwEkASUA+wD8AOQA5QEmAScBKAEpASoBKwEsAS0AuwEuAS8BMAExAOYA5wCmATIA
+2ADhATMBNADbANwA3QDgANkA3wC2ALcAxAC0ALUAxQCCAMIAhwCrAL4AvwC8ATUBNgCMATcBOADv
+ATkBOgE7ATwBPQE+AT8BQAFBAUIBQwFEAUUBRgFHAUgBSQFKAUsBTAFNAU4BTwFQAVEBUgFTAVQB
+VQFWAVcBWAFZAVoBWwFcAV0BXgFfAWABYQFiAWMBZAFlAWYBZwFoAWkBagFrAWwBbQFuAW8BcAFx
+AXIBcwF0AXUBdgF3AXgBeQF6AXsBfAF9AX4BfwGAAYEKc29mdGh5cGhlbgd1bmkwMEIyB3VuaTAw
+QjMFbWljcm8HdW5pMDBCOQZBYnJldmUGYWJyZXZlB0FvZ29uZWsHYW9nb25lawZEY2Fyb24GZGNh
+cm9uBkRjcm9hdAdFb2dvbmVrB2VvZ29uZWsGRWNhcm9uBmVjYXJvbgxrZ3JlZW5sYW5kaWMGTGFj
+dXRlBmxhY3V0ZQZMY2Fyb24GbGNhcm9uBk5hY3V0ZQZuYWN1dGUGTmNhcm9uBm5jYXJvbgNFbmcD
+ZW5nB29tYWNyb24NT2h1bmdhcnVtbGF1dA1vaHVuZ2FydW1sYXV0BlJhY3V0ZQZyYWN1dGUGUmNh
+cm9uBnJjYXJvbgZTYWN1dGUGc2FjdXRlCFRjZWRpbGxhCHRjZWRpbGxhBlRjYXJvbgZ0Y2Fyb24F
+VXJpbmcFdXJpbmcNVWh1bmdhcnVtbGF1dA11aHVuZ2FydW1sYXV0BlphY3V0ZQZ6YWN1dGUKWmRv
+dGFjY2VudAR6ZG90CGRvdGxlc3NqB3VuaTAyQzkHdW5pMDJDQgd1bmkyMDc0BGV1cm8HdXBhcnJv
+dwlkb3duYXJyb3cMdmlzaWJsZXNwYWNlCE5hbWVNZS4xCE5hbWVNZS4yCE5hbWVNZS4zCE5hbWVN
+ZS40CE5hbWVNZS41CE5hbWVNZS42CE5hbWVNZS43CE5hbWVNZS44CE5hbWVNZS45CU5hbWVNZS4x
+MAlOYW1lTWUuMTEJTmFtZU1lLjEyCU5hbWVNZS4xMwlOYW1lTWUuMTQJTmFtZU1lLjE1CU5hbWVN
+ZS4xNglOYW1lTWUuMTcJTmFtZU1lLjE4CU5hbWVNZS4xOQlOYW1lTWUuMjAJTmFtZU1lLjIxCU5h
+bWVNZS4yMglOYW1lTWUuMjMJTmFtZU1lLjI0CU5hbWVNZS4yNQlOYW1lTWUuMjYJTmFtZU1lLjI3
+CU5hbWVNZS4yOAlOYW1lTWUuMjkJTmFtZU1lLjMwCU5hbWVNZS4zMQpOYW1lTWUuMTI3Ck5hbWVN
+ZS4xMjgKTmFtZU1lLjEyOQpOYW1lTWUuMTMwCk5hbWVNZS4xMzEKTmFtZU1lLjEzMgpOYW1lTWUu
+MTMzCk5hbWVNZS4xMzQKTmFtZU1lLjEzNQpOYW1lTWUuMTM2Ck5hbWVNZS4xMzcKTmFtZU1lLjEz
+OApOYW1lTWUuMTM5Ck5hbWVNZS4xNDAKTmFtZU1lLjE0MQpOYW1lTWUuMTQyCk5hbWVNZS4xNDMK
+TmFtZU1lLjE0NApOYW1lTWUuMTQ1Ck5hbWVNZS4xNDYKTmFtZU1lLjE0NwpOYW1lTWUuMTQ4Ck5h
+bWVNZS4xNDkKTmFtZU1lLjE1MApOYW1lTWUuMTUxCk5hbWVNZS4xNTIKTmFtZU1lLjE1MwpOYW1l
+TWUuMTU0Ck5hbWVNZS4xNTUKTmFtZU1lLjE1NgpOYW1lTWUuMTU3Ck5hbWVNZS4xNTgKTmFtZU1l
+LjE1OQ5jaXJjdW1mbGV4LmNhcAljYXJvbi5jYXAJZ3JhdmUuY2FwCWFjdXRlLmNhcApOYW1lTWUu
+MzI5B3Iuc2VyaWYQaHVuZ2FydW1sYXV0LmNhcAx6ZXJvLm5vc2xhc2gAAAAAAAH//wACAAEAAAAO
+AAAAGAAAAAAAAgABAAEBaAABAAQAAAACAAAAAAABAAAAAMf+sN8AAAAAwVl2DgAAAADHpGwa
+------MultipartBoundary--P2eopmYoMS5k8SVC2kZ38m5o9jpMVl2la99L1MoEZE----
+Content-Type: image/png
+Content-Transfer-Encoding: base64
+Content-Location: https://requirejs.org/i/grid.png
+
+iVBORw0KGgoAAAANSUhEUgAAAxwAAAAFCAYAAADPNurGAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJ
+bWFnZVJlYWR5ccllPAAAAE1JREFUeNrs17EJACAMAMHoGJZuYu3+rVM4gJ0TKIjcTRACgXyavZU4
+qwb8Yzw+n3sDAJ7+f7J9AgAAtwgOAABAcAAAAIIDAABgWwIMAL4oA6RbzxyIAAAAAElFTkSuQmCC
+------MultipartBoundary--P2eopmYoMS5k8SVC2kZ38m5o9jpMVl2la99L1MoEZE----
+Content-Type: image/png
+Content-Transfer-Encoding: base64
+Content-Location: https://requirejs.org/i/shadow.png
+
+iVBORw0KGgoAAAANSUhEUgAAAAoAAAABCAIAAABol6gpAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJ
+bWFnZVJlYWR5ccllPAAAACZJREFUeNocxLkRACAAAjDcf1NKah49U+RI2gZgX9skb9skrwADAIUn
+Gmyx+l0wAAAAAElFTkSuQmCC
+------MultipartBoundary--P2eopmYoMS5k8SVC2kZ38m5o9jpMVl2la99L1MoEZE----
+Content-Type: image/png
+Content-Transfer-Encoding: base64
+Content-Location: https://requirejs.org/i/logo.png
+
+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
+------MultipartBoundary--P2eopmYoMS5k8SVC2kZ38m5o9jpMVl2la99L1MoEZE----
+Content-Type: image/png
+Content-Transfer-Encoding: base64
+Content-Location: https://requirejs.org/i/dot.png
+
+iVBORw0KGgoAAAANSUhEUgAAAAcAAAADCAYAAABfwxXFAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJ
+bWFnZVJlYWR5ccllPAAAADRJREFUeNpi+P//P8Oh62/+g2h0zHT89rv/ORs+Mjx6/fk/AzoAqXj5
+7tP/f//+YegGCDAAXJg1gkUj9bMAAAAASUVORK5CYII=
+------MultipartBoundary--P2eopmYoMS5k8SVC2kZ38m5o9jpMVl2la99L1MoEZE----
+Content-Type: image/png
+Content-Transfer-Encoding: base64
+Content-Location: https://requirejs.org/i/sprite.png
+
+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
+2VSNAAAAAElFTkSuQmCC
+------MultipartBoundary--P2eopmYoMS5k8SVC2kZ38m5o9jpMVl2la99L1MoEZE----
+Content-Type: image/png
+Content-Transfer-Encoding: base64
+Content-Location: https://requirejs.org/i/arrow.png
+
+iVBORw0KGgoAAAANSUhEUgAAAEIAAAAKCAYAAAAAX4jpAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJ
+bWFnZVJlYWR5ccllPAAAAV5JREFUeNpi8PX1/Q/EAQxAQAx7qIH///8TpY4JiBdwc3OvP3bsWBqR
+7CEZGNDI3A/EDtjUMAIlBMTExO5ycXHxBwcHGy1evHg/PvbEiRNVmJiYHgy1gPDz84MnDT4+vguf
+Pn0q3Lx58wF4igByPvz+/bv2wYMHzMePH9///fv3Hnzszs7OsyCDhxJGB8BAMABS+6Ojo8/DUggo
+RSgA6fsMIxhs3LjRkRHE6O7u9jp79uxWZ2dnBicnJ4bq6moGfOzk5OQh51l/f38MMR0dHYbIyEgw
+zQIqIw4dOtTKwcFxMzw8XCI/P//X379/3+FiAwNBHFR4AsuJwiFWc/zHFgBAAConGlmARD8jI6Ni
+f3//06lTp/59+/Yt27Rp0/7iYgPVPxhKgYArBcACAOgXSIEJqlaABebef//+vSeGDcQKQ7UsALr9
+PxDvB2KMKpQRKAhLNoFAvIFI9rADAAEGAPsWjq18/ELFAAAAAElFTkSuQmCC
+------MultipartBoundary--P2eopmYoMS5k8SVC2kZ38m5o9jpMVl2la99L1MoEZE----
+Content-Type: image/png
+Content-Transfer-Encoding: base64
+Content-Location: https://requirejs.org/i/line.png
+
+iVBORw0KGgoAAAANSUhEUgAAANwAAAACCAIAAAC8DCWJAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJ
+bWFnZVJlYWR5ccllPAAAACBJREFUeNpivHv3LsMoGAWDCTD+//9/NBRGwaACAAEGABoDBZeuTSdo
+AAAAAElFTkSuQmCC
+------MultipartBoundary--P2eopmYoMS5k8SVC2kZ38m5o9jpMVl2la99L1MoEZE----
+Content-Type: image/png
+Content-Transfer-Encoding: base64
+Content-Location: https://requirejs.org/i/arrow-x.png
+
+iVBORw0KGgoAAAANSUhEUgAAADQAAAAxCAYAAACVtYpYAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJ
+bWFnZVJlYWR5ccllPAAAAzBJREFUeNrMmt1x2kAQxw+OApQOxBOPqAPsAhjjCogrSKgAXAFOBZgK
+gKGAyBVEfuUl0IFcQbIb/oJFlhQ+7kM7syMJ6fb2d7t71vnUUpB+v39Hh5+kCemcdLler7eqhkK+
+hnQYkA5JI9J78jXmey3xXIJjBJ1Sw9rAFUCoAt9VI9dogUZFchgFDzAM8KvkNg/2Y3bRzN1clTRK
+5Ch4kG1F/yc+54GWJcY4OqkvGvR9D19Ulc/NgobyAb4OK9LQpQzgS5pLt7QqQjKEHOI26SvpjPL4
+q8cJgfuewZe2SL9PJdIsCeEoSzPSJ59QEoZ9Eek3KiqRxgWG2SgbZ6OvPmDOaaPPNb7ZbFadTodz
+eELHHV0ndYO5CMgl1LUwFwO5gLoF5iogm1C3wlwNZAPKBMxNQCahTMHcDGQCyiSMEaBboEzDGAO6
+BsoGjFGgS6BswRgHOgfKJowVoCoo2zAXvZxeOR0fXmjxk1UY60A5KGUbpmw9ZFreSs6tiLYcHbnS
+TFwsPbQLGE4zV0sP7QLG5XpKu4JxBaVdwriA0q5hbENpHzA2obQvGFtQ2ieMDSjtG8Y0lK4DjEko
+XRcYU1CNCsd5v/VO7bcv2OgW599JXwhm5Ogt/YU0UPutlAjnMfV/X9SuVWHzEQZC6BBH6zAsHH2C
+UhhAHsw5dKsqdhNbJZGJRFR2uBXit1C5kwB9RsKHHukY+65JPlJFERqJyHTVfucsQOg/YNAlEG9q
+xQyBlI+xrpoXRaolIvNb1Mm7OB/g+AEDY4dAXMM/MMApAN/Ucav0gfz+V18UqXZ+xfosVpQ9zGRT
+ddwp68KQghHbS/esjxR9ZzuLU/jWE6vg50OEUDMyKjFGJJvhUtQRj0JMz8cO0y1Gn2P4l4pIrURN
+h/jGImjQyQQjEIhpMaulB4wAN1yQ8YbyIOTjHzHr9gAzFRFMsqC0yMmJaMj1ssBlAtAs3FvlT7bQ
+YcG0zXu+y7JZLsVIzBDKLNWyLX4vkhU86updHb9XeFKn3y2cAmXf8lDDb+LvzlDVRyIx6yUyMv97
+U+CwdpGOy7rQkD9fMODDshIo+0fjTkwOdZRAvMGcyF8BBgCo+VjX7sZ6LQAAAABJRU5ErkJggg==
+------MultipartBoundary--P2eopmYoMS5k8SVC2kZ38m5o9jpMVl2la99L1MoEZE----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://ajax.googleapis.com/ajax/libs/dojo/1.4/dojox/highlight/resources/highlight.css
+
+@charset "utf-8";
+=0A
+------MultipartBoundary--P2eopmYoMS5k8SVC2kZ38m5o9jpMVl2la99L1MoEZE------
