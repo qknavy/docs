@@ -41,4 +41,47 @@ Test：新建一个go文件hello.go
 
 一切OK
 
+但是这时候如果我们自己定义了包的话需要拷贝到安装目录下的src目录下才能被其它代码引用到，很麻烦，如何破？
 
+- 配置gopath
+  File->settings->Language & Frameworks->Go->Go Libraies，在Project Libraries下面添加当前项目路径
+
+5、自定义包
+
+在项目的源码路径（这里我们创建了一个src目录作为源码路径）下创建包example，然后创建一个go文件test.go
+
+    package example
+    
+    import (
+    	"fmt"
+    )
+    
+    func MyTest()  {
+    	fmt.Println("这是我自己的方法")
+    }
+
+目录结构如下
+
+项目路径
+
+	|—src
+
+		|—example
+
+			|—test.go
+
+		hello.go
+
+hello.go就是程序的主入口：
+
+    package main
+    
+    import (
+    	"example"
+    )
+    
+    func main() {
+    	example.MyTest()
+    }
+
+执行代码，可以看到程序正常运行了
