@@ -338,7 +338,7 @@ public class MyMessageDecoder extends LengthFieldBasedFrameDecoder
 
 ### 4、业务处理Handler
 
-#### 4.1、`LoginAuthRespHandler`：心跳请求处理类
+#### 4.1、`LoginAuthRespHandler`：客户端登录请求响应处理类
 
 ```java
 public class LoginAuthRespHandler extends ChannelInboundHandlerAdapter
@@ -383,7 +383,7 @@ public class LoginAuthRespHandler extends ChannelInboundHandlerAdapter
 }
 ```
 
-#### 4.2、`LoginAuthReqHandler`：登录响应处理类
+#### 4.2、`LoginAuthReqHandler`：服务端登录请求处理类
 
 ```java
 public class LoginAuthReqHandler extends ChannelInboundHandlerAdapter
@@ -445,7 +445,7 @@ public class LoginAuthReqHandler extends ChannelInboundHandlerAdapter
 }
 ```
 
-#### 4.3、`HeartBeatRespHandler`：心跳请求处理类
+#### 4.3、`HeartBeatRespHandler`：客户端心跳请求响应处理类
 
 ```java
 public class HeartBeatRespHandler extends ChannelInboundHandlerAdapter
@@ -504,7 +504,7 @@ public class HeartBeatRespHandler extends ChannelInboundHandlerAdapter
 }
 ```
 
-#### 4.4、`HeartBeatReqHandler`：心跳响应处理类
+#### 4.4、`HeartBeatReqHandler`：服务端心跳请求处理类
 
 ```java
 public class HeartBeatReqHandler extends ChannelInboundHandlerAdapter
