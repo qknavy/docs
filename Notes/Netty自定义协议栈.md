@@ -338,10 +338,10 @@ public class MyMessageDecoder extends LengthFieldBasedFrameDecoder
 
 ### 4、业务处理Handler
 
-#### 4.1、`LoginAuthReqHandler`：心跳请求处理类
+#### 4.1、`LoginAuthRespHandler`：心跳请求处理类
 
 ```java
-public class LoginAuthReqHandler extends ChannelInboundHandlerAdapter
+public class LoginAuthRespHandler extends ChannelInboundHandlerAdapter
 {
     @Override public void channelActive(ChannelHandlerContext ctx) throws Exception
     {
@@ -383,10 +383,10 @@ public class LoginAuthReqHandler extends ChannelInboundHandlerAdapter
 }
 ```
 
-#### 4.2、`LoginAuthRespHandler`：登录响应处理类
+#### 4.2、`LoginAuthReqHandler`：登录响应处理类
 
 ```java
-public class LoginAuthRespHandler extends ChannelInboundHandlerAdapter
+public class LoginAuthReqHandler extends ChannelInboundHandlerAdapter
 {
     //记录登录地址
     private Map<String, Boolean> node = new ConcurrentHashMap<>();
@@ -445,10 +445,10 @@ public class LoginAuthRespHandler extends ChannelInboundHandlerAdapter
 }
 ```
 
-#### 4.3、`HeartBeatReqHandler`：心跳请求处理类
+#### 4.3、`HeartBeatRespHandler`：心跳请求处理类
 
 ```java
-public class HeartBeatReqHandler extends ChannelInboundHandlerAdapter
+public class HeartBeatRespHandler extends ChannelInboundHandlerAdapter
 {
     private volatile ScheduledFuture<?> heartBeat;
 
@@ -504,10 +504,10 @@ public class HeartBeatReqHandler extends ChannelInboundHandlerAdapter
 }
 ```
 
-#### 4.4、`HeartBeatRespHandler`：心跳响应处理类
+#### 4.4、`HeartBeatReqHandler`：心跳响应处理类
 
 ```java
-public class HeartBeatRespHandler extends ChannelInboundHandlerAdapter
+public class HeartBeatReqHandler extends ChannelInboundHandlerAdapter
 {
 
     @Override public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception
@@ -574,8 +574,8 @@ public class Server
                         channel.pipeline().addLast(new MyMessageDecoder(1024 * 1024,4 , 4 ,-8,0));
                         channel.pipeline().addLast(new MyMessageEncoder());
                         channel.pipeline().addLast("readTimeOutHandler",new ReadTimeoutHandler(50));
-                        channel.pipeline().addLast("loginAuthRespHandler",new LoginAuthRespHandler());
-                        channel.pipeline().addLast("heartBeatRespHandler",new HeartBeatRespHandler());
+                        channel.pipeline().addLast("loginAuthReqHandler",new LoginAuthRespHandler());
+                        channel.pipeline().addLast("heartBeatReqHandler",new HeartBeatRespHandler());
                     }
                 });
         try
@@ -633,8 +633,8 @@ public class Client
                             channel.pipeline().addLast(new MyMessageDecoder(1024 * 1024, 4, 4, -8, 0));
                             channel.pipeline().addLast("messageEncoder",new MyMessageEncoder());
                             channel.pipeline().addLast("readTimeOutHandler", new ReadTimeoutHandler(50));
-                            channel.pipeline().addLast("loginAuthHandler", new LoginAuthReqHandler());
-                            channel.pipeline().addLast("headtBeatHandler", new HeartBeatReqHandler());
+                            channel.pipeline().addLast("loginAuthHandler", new LoginAuthRespHandler());
+                            channel.pipeline().addLast("headtBeatHandler", new HeartBeatRespHandler());
                         }
                     });
             bootstrap.remoteAddress(host,port);
