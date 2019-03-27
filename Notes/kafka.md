@@ -18,25 +18,21 @@ Kafka是一款分布式消息及订阅系统。（领英公司，scale语言编�
 
 **特点：**
 
-* 高性能
-* 高吞吐量
+- 高性能
+- 高吞吐量
 
 内置分区、实现集群
 
 **应用场景：**
 
-> * 用户行为跟踪
-> * 日志收集（ELK）
-
-
+> - 用户行为跟踪
+> - 日志收集（ELK）
 
 ### 1.2、Kafka的架构
 
 生产者发送消息到broker，消费者主动从broker拉取消息
 
 而amq是主动推送到消费端
-
-
 
 ### 1.3、基本概念：
 
@@ -46,15 +42,11 @@ partition：数据分区。（类似一张分表）
 
 group：分组。每个消息都有一个所属的分组
 
-
-
 ### 1.4、基本操作：
 
 #### 1.4.1、启动
 
 Kafka-server-start.sh ../conf/server.properties
-
-
 
 #### 1.4.2、创建主题：
 
@@ -100,17 +92,15 @@ hello,my name is Navy
 
 可以看到正常接收消息
 
-
-
 ## 2、**集群搭建**：
 
-* 修改config目录下server.properties中的`zookeeper.connect`地址
+- 修改config目录下server.properties中的`zookeeper.connect`地址
 
   > 如果是zk集群的话写多个zk地址，逗号隔开
 
-* 修改config目录下server.properties中的`broker.id`
+- 修改config目录下server.properties中的`broker.id`
 
-* 配置`server.properties`的listeners
+- 配置`server.properties`的listeners
 
 ```
 listeners=PLAINTEXT://10.62.58.219:9092
@@ -120,13 +110,13 @@ listeners=PLAINTEXT://10.62.58.219:9092
 
 启动集群的节点，就可以在zk上看到自动生成了一些zk节点信息
 
-* brokers：该节点下保存了ids、topics、seqid等
+- brokers：该节点下保存了ids、topics、seqid等
 
-  * ids：集群存活的所有的broker.id
-  * topics：主题
-  * seqid
+  - ids：集群存活的所有的broker.id
+  - topics：主题
+  - seqid
 
-* controller：通过zk的get命令可以查看该节点信息
+- controller：通过zk的get命令可以查看该节点信息
 
   ```
   [zk: localhost:2181(CONNECTED) 19] get /controller
@@ -144,19 +134,13 @@ listeners=PLAINTEXT://10.62.58.219:9092
   numChildren = 0
   ```
 
-  
-
   这里的brokerid就是集群leader节点的id
-
-
-
-
 
 ## 3、API的使用（demo）：
 
 ### 3.1、引入依赖
 
-```xml
+```
 <dependency>
     <groupId>org.apache.kafka</groupId>
     <artifactId>kafka-clients</artifactId>
@@ -166,7 +150,7 @@ listeners=PLAINTEXT://10.62.58.219:9092
 
 3.2、producer
 
-```java
+```
 public class Producer extends Thread
 {
     private final KafkaProducer<Integer, String> producer;
@@ -210,11 +194,9 @@ public class Producer extends Thread
 }
 ```
 
-
-
 ### 3.2、Consumer
 
-```java
+```
 public class Consumer extends Thread
 {
     private final KafkaConsumer<Integer, String> consumer;
@@ -271,8 +253,8 @@ message received : [ message_1 ]
 
 KafkaProducer类的发送消息有几个重载的方法：
 
-* public Future<RecordMetadata> send(ProducerRecord<K, V> record)
-* public Future<RecordMetadata> send(ProducerRecord<K, V> record, Callback callback)
+- public Future send(ProducerRecord<K, V> record)
+- public Future send(ProducerRecord<K, V> record, Callback callback)
 
 在新版本的kafka中，默认发送消息采用异步的方式发送，如果我们需要采用同步的方式，则可以利用Future个get方法阻塞完成同步。
 
@@ -280,7 +262,7 @@ KafkaProducer类的发送消息有几个重载的方法：
 
 #### 3.4.1、生产者参数
 
-```java
+```
 public static final String BOOTSTRAP_SERVERS_CONFIG = "bootstrap.servers";//kafka集群地址
 public static final String CLIENT_DNS_LOOKUP_CONFIG = "client.dns.lookup";
 public static final String METADATA_MAX_AGE_CONFIG = "metadata.max.age.ms";
@@ -336,7 +318,7 @@ public static final String TRANSACTIONAL_ID_DOC = "The TransactionalId to use fo
 
 #### 3.4.2、消费端参数
 
-```java
+```
 public static final String GROUP_ID_CONFIG = "group.id";
 private static final String GROUP_ID_DOC = "A unique string that identifies the consumer group this consumer belongs to. This property is required if the consumer uses either the group management functionality by using <code>subscribe(topic)</code> or the Kafka-based offset management strategy.";
 public static final String MAX_POLL_RECORDS_CONFIG = "max.poll.records";
@@ -462,7 +444,7 @@ public static final String ISOLATION_LEVEL_DOC = "<p>Controls how to read messag
 
 ### 4.1、在springboot项目的基础上添加kafka的依赖
 
-```xml
+```
 <dependency>
     <groupId>org.springframework.kafka</groupId>
 	<artifactId>spring-kafka</artifactId>
@@ -474,7 +456,7 @@ public static final String ISOLATION_LEVEL_DOC = "<p>Controls how to read messag
 
 在application.properties文件中添加kafka的配置
 
-```properties
+```
 spring.kafka.producer.acks=-1
 spring.kafka.producer.bootstrap-servers=ubuntu1.qknavy.com:9092,ubuntu2.qknavy.com:9092,ubuntu3.qknavy.com:9092
 spring.kafka.producer.client-id=spring-demo-producer
@@ -484,7 +466,7 @@ spring.kafka.producer.value-serializer=org.apache.kafka.common.serialization.Str
 
 4.3、注入KafkaTemplate实例
 
-```java
+```
 @Autowired
 private KafkaTemplate<Integer, String> kafkaTemplate;
 ```
@@ -493,7 +475,7 @@ private KafkaTemplate<Integer, String> kafkaTemplate;
 
 ### 4.4、直接调用kafkaTemplate的发送消息的方法
 
-```java
+```
 kafkaTemplate.send("test",msg);
 ```
 
@@ -508,4 +490,198 @@ consumer received msg[ hha ]
 ```
 
 > 从上面的操作可以看到，springboot项目集成kafka是非常简单的，只需要添加上kafka的配置然后注入kafka的模板对象就可以了。
+
+
+
+---
+
+
+
+> * Topic & Partition
+> * 消息分发策略
+> * 消息的消费原理
+> * 消息的存储策略
+> * Partition副本机制
+
+## 5、Topic & Partition
+
+* `topic`是在kafka中存储消息的逻辑概念。
+* `Partition`是消息存储的物理概念，每个topic可以划分多个分区。相同topic下的不同分区的消息是不同的
+* 往同一个分区里边的消息是顺序写的过程
+
+kafka中一条消息是由Key-Value组成，key和value都是可选项，producer会根据key和Partition机制判断这个消息会放到哪个Partition里面，类似于数据库的分库分表操作。
+
+
+
+## 6、分区策略
+
+> kafka内置有自己的分区策略（默认哈希取模），也可以自定义我们自己的分区策略
+
+### 6.1、自定义分区策略
+
+#### 6.1.1、自定义分区策略类
+
+```java
+public class MyPartition implements Partitioner
+{
+    private final Random random = new Random();
+
+    @Override public int partition(String topic, Object key, byte[] bytes, Object value, byte[] bytes1, Cluster cluster)
+    {
+        //获得分区列表
+        List<PartitionInfo> partitionInfos = cluster.partitionsForTopic("test");
+        int partitionNum = 0;
+        if (key == null){
+            partitionNum = random.nextInt(partitionInfos.size());
+        }else {
+            partitionNum = Math.abs(key.hashCode() % partitionInfos.size());
+        }
+        System.out.println("key -> " + key + ", value -> " + value + ", partition -> " + partitionNum);
+        return partitionNum;
+    }
+
+    @Override public void close()
+    {
+    }
+
+    @Override public void configure(Map<String, ?> map)
+    {
+    }
+}
+```
+
+#### 6.1.2、为生产者指定分区策略
+
+```java
+properties.put(ProducerConfig.PARTITIONER_CLASS_CONFIG,"com.qknavy.kafka.partition.MyPartition");
+```
+
+
+
+如果默认情况下key为null，kafka的消息如何分发？
+
+-->也是随机分发，在metadata.max.age.ms参数设置的时间范围之内变更一次，这个值默认10分钟
+
+> ```
+> properties.put(ProducerConfig.METADATA_MAX_AGE_CONFIG,"10000");
+> ```
+
+
+
+## 7、消息消费原理
+
+### 7.1、消费指定分区
+
+消费者可以指定消费指定的分区里边的消息
+
+> ```java
+> TopicPartition topicPartition = new TopicPartition(topic,0);
+> consumer = new KafkaConsumer<Integer, String>(properties);
+> consumer.assign(Arrays.asList(topicPartition));
+> ```
+
+上面的代码就指定消费0号分区的topic主题的消息。这样可以让同一个组的不同消费者消费不同的分区，以此从某方面提升IO性能和提升消费端的消费能力。
+
+> 比如有三个消费者，三个分区，每个消费者消费一个分区的消息
+>
+> 如果消费者等于分区数，每个消费者消费一个分区，如果消费者小于分区数，则某些消费者要消费多个分区，如果消费者大于分区数，则有些消费者消费不到分区里的消息。kafka中分区不支持消费者并发消费消息，所以可以视消费能力适当做负载
+
+
+
+消费者从多个分区读取消息，则不能保证跨分区的消息的顺序性，只有同一个分区的消息才是顺序的。
+
+同时，增减Partition会进行rebalance，重新负载。
+
+
+
+### 7.2、分区策略
+
+> * Range（范围分区），默认方式
+> * RoundRobin（轮询）
+
+可以通过`partition.assignment.strategy`进行设置（broker的server.conf里面配置）
+
+#### 7.2.1、范围分区
+
+范围分区是对同一个topic里边的多个Partition而言，首先会对同一个主题的Partition按照字母的顺序进行排序。
+
+> 假设有10个分区--->对应三个消费者：
+>
+> P: 0 1 2 3 4 5 6 7 8 9
+>
+> 分区数量/消费者数量（10/3）
+>
+> c1：0 1 2 3
+>
+> c2：4 5 6
+>
+> c3：7 8 9
+
+```
+*注： 如果有多个topic，而且其中某一个计算的到的消费分区比其它的多1个，那么它的总数将多出两个要消费分区。而如果有多个topic，则问题会更明显
+```
+
+#### 7.2.2、轮询分区
+
+所有的分区和所有消费者的数量列出来，然后按照hashcode进行排序。通过轮询算法计算分区和消费者。这样每个消费者消费的分区就比较平均。
+
+两个条件：
+
+* 每个主题的消费者的实例具有相同数据的数据流
+* 每个消费者订阅的主题是相同的。
+
+
+
+#### 7.2.3、什么时候触发使用这些策略？
+
+##### 1、如果消费者发生变化
+
+> 同一个consumer group新增消费者
+
+##### 2、消费者离开consumer group
+
+##### 3、topic中Partition数量发生变化
+
+##### 4、消费者主动取消订阅topic
+
+
+
+#### 7.2.4、分区策略的具体实现
+
+> 谁来执行rebalance？
+>
+> 谁来管理consumer group？
+
+* **Coordinator**
+
+当group第一个消费者启动的时候，它会和kafka的broker去确定当前组的Coordinator是谁。之后同一个组的consumer都会和这个Coordinator通信。
+
+如何确定谁是Coordinator？
+
+> 消费者会向集群中的任意broker发送一个groupCoordinatorRequest请求，然后服务端会返回一个负载最小的broker节点的ID，当前consumer group里的所有consumer都会尝试和这个broker进行连接，进入第二个阶段（joinGroup），确保coordinator这个角色已经确定好了，这里有两步操作：
+>
+> 1、**joingroup**
+>
+> > * 服务端返回一个最小负载的broker节点的ID之后，当前消费组的所有的consumer都会向这个准Coordinator发送一个joingroup请求
+> > * coordinator收到这些请求，然后coordinator从这些consumer中选取一个leader，并且返回一个响应信息到consumer，这个请求信息和响应信息都包含[group_id,menber_id,protocol_metadata...]，其中protocol_metadata包含消费者序列化后的订阅了哪个信息，而且响应信息还包含[generation_id,leader_id,menbers,menber_metadata...]，其中generation_id类似epoch朝代，menbers只会发送给leader，非leader的这个值为空的。
+>
+> 这个过程确定了消费者里谁是leader + 确定了coordinator角色，决定由谁来管理rebalance操作
+>
+> 2、**sync**
+>
+> 第一个过程建立连接后会保持心跳。同时每个消费者会发送一个相应的的请求（SyncGroupRequest）过来，请求中包含[group_id,menber_id,generator_id,menber_assignment]，menber_assignment只在leader节点有值。
+>
+> 每个consumer都会发送SyncGroupRequest消息，但是只有leader才会发送一个分配方案。
+>
+> coordinator会返回一个响应消息，会将收到的leader发送的分区策略发送给所有的consumer，每个consumer收到后会在客户端执行这个方案【1.0之前的版本是在zk上面执行的】。
+
+### 7.3、offset
+
+每个Partition里的消息都是顺序存储的，每消费一条消息offset都会相应地递增。消费过的消息不能再次消费。这个值是怎么维护的呢？
+
+在kafka中，__consumer_offsets主题维护了这个消息，这个topic默认有50个分区。它保存消费者消费消息的offset位置。
+
+1、如何确定消费组消费的消息在哪个分区？
+
+consumer.group.id#hashcode % PartitionCount
 
