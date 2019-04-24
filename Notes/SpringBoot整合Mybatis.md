@@ -234,3 +234,83 @@ public class UserControllerTest
 
 
 
+
+
+### 11、添加分页支持
+
+##### a、添加依赖
+
+```xml
+<dependency>
+    <groupId>com.github.pagehelper</groupId>
+    <artifactId>pagehelper</artifactId>
+    <version>5.1.6</version>
+</dependency>
+<dependency>
+    <groupId>com.github.pagehelper</groupId>
+    <artifactId>pagehelper-spring-boot-autoconfigure</artifactId>
+    <version>1.2.7</version>
+</dependency>
+```
+
+> `pagehelper-spring-boot-autoconfigure`必须导入，否则分页不生效
+
+
+
+##### b、分页配置`PageHelperConfig.java`
+
+```java
+@Configuration
+public class PageHelperConfig {
+    @Bean
+    public PageHelper pageHelper(){
+        PageHelper pageHelper = new PageHelper();
+        Properties p = new Properties();
+        //1.offsetAsPageNum:设置为true时，会将RowBounds第一个参数offset当成pageNum页码使用.
+        p.setProperty("offsetAsPageNum", "true");
+        //2.rowBoundsWithCount:设置为true时，使用RowBounds分页会进行count查询.
+        p.setProperty("rowBoundsWithCount", "true");
+        //3.reasonable：启用合理化时，如果pageNum<1会查询第一页，如果pageNum>pages会查询最后一页。
+        p.setProperty("reasonable", "true");
+        pageHelper.setProperties(p);
+        return pageHelper;
+    }
+}
+```
+
+
+
+##### c、分页
+
+> PageHelper.startPage方法
+
+常用的有以下几个重载方法：
+
+* 简单分页
+
+  ```
+  public static <E> Page<E> startPage(int pageNum, int pageSize)
+  ```
+
+* 带排序的分页
+
+  ```
+  public static <E> Page<E> startPage(int pageNum, int pageSize, String orderBy)
+  ```
+
+  > 下面带排序的分页方式以及其它参数也可以通过`Page`的setOrderBy单独设置
+
+d、示例
+
+```java
+@GetMapping("/query")
+    public PageInfo query(@RequestParam(defaultValue = "1", name = "pageNum") int pageNum,
+            @RequestParam(defaultValue = "2", name = "pageSize") int pageSize, String name) {
+        name = StringUtils.isEmpty(name)?"":name;
+        PageHelper.startPage(pageNum,pageSize,"id asc");
+        List<User> userList = userService.findUsers(name);
+        PageInfo<User> page = new PageInfo<User>(userList);
+        return page;
+    }
+```
+
