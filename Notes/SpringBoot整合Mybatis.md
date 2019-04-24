@@ -314,3 +314,31 @@ d、示例
     }
 ```
 
+
+##### e、springboot的配置方式
+
+###### 1)、引入依赖
+
+> 这里只需要引入一个依赖就可以了
+
+```xml
+<dependency>
+    <groupId>com.github.pagehelper</groupId>
+    <artifactId>pagehelper-spring-boot-starter</artifactId>
+    <version>1.2.7</version>
+</dependency>
+```
+
+###### 2)、springboot配置
+
+application.properties文件中加入分页相关的配置
+
+```properties
+#pagehelper分页插件配置
+pagehelper.helperDialect=mysql
+pagehelper.reasonable=true
+pagehelper.supportMethodsArguments=true
+pagehelper.params=count=countSql
+```
+
+以上两步完成就可以像前一种方式一样使用分页了
