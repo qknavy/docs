@@ -205,3 +205,31 @@ public class UserMapperTest
 所有测试方法都通过大功告成
 
 注意上面的查询方法`testQuery`用到了一个Wrapper，这个查询器非常强大，基本上支持我们常见的所有操作，比如order，le，gt，eq，in，or，and，between...
+
+
+
+
+### 8、分页
+
+##### 添加分页依赖
+
+```xml
+<!--分页-->
+<dependency>
+    <groupId>com.github.pagehelper</groupId>
+    <artifactId>pagehelper-spring-boot-starter</artifactId>
+    <version>1.2.7</version>
+</dependency>
+```
+
+##### 测试
+
+```java
+@Test
+public void testPage(){
+    Wrapper<User> wrapper = new QueryWrapper<User>().like("name","a");
+    IPage<User> page = new Page<>(1,2);
+    IPage<User> p = userService.page(page, wrapper);
+    System.out.println(p);
+}
+```
