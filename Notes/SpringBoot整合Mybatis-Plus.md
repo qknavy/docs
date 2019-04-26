@@ -222,6 +222,53 @@ public class UserMapperTest
 </dependency>
 ```
 
+
+##### springboot配置
+
+```java
+@EnableTransactionManagement
+@Configuration
+@MapperScan("com.qknavy.*.dao")
+public class MybatisPlusConfig
+{
+    @Bean
+    public PaginationInterceptor paginationInterceptor(){
+        PaginationInterceptor page =  new PaginationInterceptor();
+        page.setDialectType("mysql");
+        return page;
+    }
+
+    @Bean
+    public Object testBean(PlatformTransactionManager platformTransactionManager){
+        System.out.println(">>>>>>>>>>" + platformTransactionManager.getClass().getName());
+        return new Object();
+    }
+
+
+    @Bean
+    public PerformanceInterceptor performanceInterceptor() {
+        PerformanceInterceptor page = new PerformanceInterceptor();
+        page.setFormat(true);
+        return page;
+    }
+
+    @Bean
+    public PageHelper pageHelper(){
+        PageHelper pageHelper = new PageHelper();
+        Properties properties = new Properties();
+        properties.setProperty("offsetAsPageNum","true");
+        properties.setProperty("rowBoundsWithCount","true");
+        properties.setProperty("reasonable","true");
+        properties.setProperty("dialect","mysql");    //配置mysql数据库的方言
+        pageHelper.setProperties(properties);
+        return pageHelper;
+    }
+}
+```
+
+
+
+
 ##### 测试
 
 ```java
