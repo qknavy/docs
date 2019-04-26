@@ -2,7 +2,8 @@ POI常见操作
 
 ### 1、根据word模板生成Word内容
 
-[poi-tl官网](http://deepoove.com/poi-tl)
+* [poi-tl官网](http://deepoove.com/poi-tl)
+* [easypoi](https://github.com/lemur-open/easypoi)
 
 ##### 导入依赖
 
