@@ -233,3 +233,120 @@ public void testPage(){
     System.out.println(p);
 }
 ```
+
+
+
+
+
+
+### 9、自动生成代码
+
+##### 引入依赖
+
+```
+<dependency>
+  <groupId>com.baomidou</groupId>
+  <artifactId>mybatis-plus-generator</artifactId>
+  <version>3.0.5</version>
+</dependency>
+<dependency>
+  <groupId>org.freemarker</groupId>
+  <artifactId>freemarker</artifactId>
+  <version>2.3.28</version>
+</dependency>
+```
+
+##### 自定义自动生成代码的方法
+
+`CodeGenerator.java`
+
+```java
+public class CodeGenerator
+{
+    public static String scanner(String tip){
+        Scanner scanner = new Scanner(System.in);
+        StringBuilder help = new StringBuilder();
+        help.append("请输入" + tip + ":");
+        System.out.println(help.toString());
+        if (scanner.hasNext()){
+            String ipt = scanner.next();
+            if (!StringUtils.isEmpty(ipt)){
+                return ipt;
+            }
+        }
+        throw  new MybatisPlusException("请输入正确的" + tip +"!");
+    }
+
+    public static void main(String[] args)
+    {
+        //代码生成器
+        AutoGenerator mpg = new AutoGenerator();
+        //全局配置
+        GlobalConfig gc = new GlobalConfig();
+        String projectPath = System.getProperty("user.dir");
+        gc.setOutputDir(projectPath + "/src/main/java");
+        gc.setAuthor("Navy");
+        gc.setOpen(true);
+        mpg.setGlobalConfig(gc);
+
+        //数据源配置
+        DataSourceConfig dsc = new DataSourceConfig();
+        dsc.setUrl("jdbc:mysql://localhost:3306/springboot_mybatis_demo?characterEncoding=utf8");
+        dsc.setDriverName("com.mysql.jdbc.Driver");
+        dsc.setUsername("root");
+        dsc.setPassword("P@ssw0rd");
+        mpg.setDataSource(dsc);
+
+        //包配置
+        PackageConfig pc = new PackageConfig();
+        pc.setModuleName(scanner("模块名"));
+        pc.setParent("com.qknavy.test");
+        mpg.setPackageInfo(pc);
+
+        //自定义配置
+        InjectionConfig cfg = new InjectionConfig()
+        {
+            @Override public void initMap()
+            { }
+        };
+        //如果是模板引擎是 freemarker
+        String templatePath = "/templates/mapper.xml.ftl";
+
+        //自定义输出配置
+        List<FileOutConfig> focList = new ArrayList<>();
+        //自定义配置会被有限输出
+        focList.add(new FileOutConfig(templatePath){
+            @Override public String outputFile(TableInfo tableInfo)
+            {
+                return projectPath + "/src/main/resources/mapper/" + pc.getModuleName()+"/"+tableInfo.getEntityName()
+                        +"Mapper"+ StringPool.DOT_XML;
+            }
+        });
+        cfg.setFileOutConfigList(focList);
+        mpg.setCfg(cfg);
+
+        //配置模板
+        TemplateConfig templateConfig = new TemplateConfig();
+        templateConfig.setXml(null);
+        mpg.setTemplate(templateConfig);
+
+        //策略配置
+        StrategyConfig strategyConfig = new StrategyConfig();
+        strategyConfig.setNaming(NamingStrategy.underline_to_camel);
+        strategyConfig.setColumnNaming(NamingStrategy.underline_to_camel);
+        strategyConfig.setEntityLombokModel(true);
+        strategyConfig.setRestControllerStyle(true);//true-生成restcontroller，false-生成controller
+        strategyConfig.setInclude(scanner("表名，多个英文逗号分隔").split(","));
+        strategyConfig.setControllerMappingHyphenStyle(true);
+        //strategyConfig.setTablePrefix(pc.getModuleName()+"_");//在rest路径上加上表的前缀
+
+        mpg.setStrategy(strategyConfig);
+        mpg.setTemplateEngine(new FreemarkerTemplateEngine());
+        mpg.execute();
+    }
+}
+```
+
+> 首先需要保证数据库的表先存在，然后修改对应的文件路径和包路径，运行上面代码就会自动生成mapper、service、controller以及entity
+
+
