@@ -284,4 +284,174 @@ public class StudentController
 
 
 
+### 导出多sheet
+```java
+@GetMapping(value = "/export")
+    public ResponseEntity<InputStreamResource> export() throws IOException
+    {
+        //准备数据
+        Random random = new Random();
+        List<Map<String, Object>> mapList = new ArrayList();
+        for (int i = 0 ; i < 12 ; i ++){
+            //将数据关联到excel
+            ExportParams params = new ExportParams();
+            params.setSheetName("2019年"+(i+1)+"月");
+            params.setType(ExcelType.XSSF);
+            Map<String, Object> map = new HashMap<>();
+            map.put("title",params);
+            map.put("entity",Teacher.class);
+            List<Teacher> data = new ArrayList<Teacher>();
+            for (int j = 0 ; j < 1000 ; j ++){
+                Teacher teacher = new Teacher();
+                teacher.setName("张三"+ i);
+                teacher.setClazz("计算机"+random.nextInt(10)+"班");
+                teacher.setDay1(random.nextInt(10000));
+                teacher.setDay2(random.nextInt(10000));
+                teacher.setDay3(random.nextInt(10000));
+                teacher.setDay4(random.nextInt(10000));
+                teacher.setDay5(random.nextInt(10000));
+                teacher.setDay6(random.nextInt(10000));
+                teacher.setDay7(random.nextInt(10000));
+                teacher.setDay8(random.nextInt(10000));
+                teacher.setDay9(random.nextInt(10000));
+                teacher.setDay10(random.nextInt(10000));
+                teacher.setDay11(random.nextInt(10000));
+                teacher.setDay12(random.nextInt(10000));
+                teacher.setDay13(random.nextInt(10000));
+                teacher.setDay14(random.nextInt(10000));
+                teacher.setDay15(random.nextInt(10000));
+                teacher.setDay16(random.nextInt(10000));
+                teacher.setDay17(random.nextInt(10000));
+                teacher.setDay18(random.nextInt(10000));
+                teacher.setDay19(random.nextInt(10000));
+                teacher.setDay20(random.nextInt(10000));
+                teacher.setDay21(random.nextInt(10000));
+                teacher.setDay22(random.nextInt(10000));
+                teacher.setDay23(random.nextInt(10000));
+                teacher.setDay24(random.nextInt(10000));
+                teacher.setDay25(random.nextInt(10000));
+                teacher.setDay26(random.nextInt(10000));
+                teacher.setDay27(random.nextInt(10000));
+                teacher.setDay28(random.nextInt(10000));
+                teacher.setDay29(random.nextInt(10000));
+                teacher.setDay30(random.nextInt(10000));
+                teacher.setDay31(random.nextInt(10000));
+                data.add(teacher);
+            }
+            map.put("data",data);
+            mapList.add(map);
+        }
+        Workbook workbook = ExcelExportUtil.exportExcel(mapList,ExcelType.XSSF);
+
+        FileSystemResource file = new FileSystemResource("d:/temp/"+new Date().getTime()+".xlsx");
+        workbook.write(file.getOutputStream());
+        //导出
+        HttpHeaders headers = new HttpHeaders();
+        headers.add("Cache-Control", "no-cache, no-store, must-revalidate");
+        headers.add("Content-Disposition", "attachment; filename=\"teacher.xlsx\"");
+        headers.add("Pragma", "no-cache");
+        headers.add("Expires", "0");
+        new Thread(()->{
+            try
+            {
+                System.out.println("即将删除文件。。。");
+                TimeUnit.SECONDS.sleep(120);
+                if (file.getFile() !=null){
+                    System.out.println("删除文件");
+                    file.getFile().delete();
+                }
+            }
+            catch (InterruptedException e)
+            {
+                e.printStackTrace();
+            }
+        }).start();
+        return ResponseEntity
+                .ok()
+                .headers(headers)
+                .contentLength(file.contentLength())
+                .contentType(MediaType.parseMediaType("application/octet-stream"))
+                .body(new InputStreamResource(file.getInputStream()));
+    }
+```
+
+```java
+@Data
+@ExcelTarget(value = "学生列表")
+@NoArgsConstructor
+@ToString(includeFieldNames = true)
+public class Teacher implements Serializable
+{
+    private static final long serialVersionUID = 6791599189380651677L;
+
+    @Excel(name = "姓名")
+    private String name;
+
+    @Excel(name = "班级")
+    private String clazz;
+
+    @Excel(name = "第1天")
+    private int day1;
+    @Excel(name = "第2天")
+    private int day2;
+    @Excel(name = "第3天")
+    private int day3;
+    @Excel(name = "第4天")
+    private int day4;
+    @Excel(name = "第5天")
+    private int day5;
+    @Excel(name = "第6天")
+    private int day6;
+    @Excel(name = "第7天")
+    private int day7;
+    @Excel(name = "第8天")
+    private int day8;
+    @Excel(name = "第9天")
+    private int day9;
+    @Excel(name = "第10天")
+    private int day10;
+    @Excel(name = "第11天")
+    private int day11;
+    @Excel(name = "第12天")
+    private int day12;
+    @Excel(name = "第13天")
+    private int day13;
+    @Excel(name = "第14天")
+    private int day14;
+    @Excel(name = "第15天")
+    private int day15;
+    @Excel(name = "第16天")
+    private int day16;
+    @Excel(name = "第17天")
+    private int day17;
+    @Excel(name = "第18天")
+    private int day18;
+    @Excel(name = "第19天")
+    private int day19;
+    @Excel(name = "第20天")
+    private int day20;
+    @Excel(name = "第21天")
+    private int day21;
+    @Excel(name = "第22天")
+    private int day22;
+    @Excel(name = "第23天")
+    private int day23;
+    @Excel(name = "第24天")
+    private int day24;
+    @Excel(name = "第25天")
+    private int day25;
+    @Excel(name = "第26天")
+    private int day26;
+    @Excel(name = "第27天")
+    private int day27;
+    @Excel(name = "第28天")
+    private int day28;
+    @Excel(name = "第29天")
+    private int day29;
+    @Excel(name = "第30天")
+    private int day30;
+    @Excel(name = "第31天")
+    private int day31;
+}
+```
 
