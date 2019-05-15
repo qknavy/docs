@@ -68,7 +68,8 @@ redisTemplate.opsForValue().set(key,value);
 
 
 
-3、springboot中使用redis缓存
+## 3、springboot中使用redis缓存
+[参考](https://www.cnblogs.com/songanwei/p/9274348.html)
 
 - 开启缓存
 
